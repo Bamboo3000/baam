@@ -1,3 +1,20 @@
 .footer {
     
+    .seps {
+        margin-left: -3px;
+        margin-right: -3px;
+    }
+
+    #footerCollapse {
+
+        &.pristine {
+
+            &.collapsing {
+                transition: all 100ms ease-in-out!important;
+            }
+
+        }
+
+    }
+
 }

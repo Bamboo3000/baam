@@ -31,9 +31,53 @@
         font-size: 2.66rem;
     }
 
+    &__medium {
+        padding: 1.25rem 3rem;
+        font-size: 1.6rem;
+    }
+
+
     &__high {
         padding: 1.6rem 2.4rem;
         font-size: 1.4rem;
+
+        &.small {
+            font-size: 1rem;
+            padding: 1.7rem 2rem;
+        }
+
+        &:hover,
+        &[aria-expanded="true"] {
+            background-color: black;
+            color: white;
+        }
+
+    }
+
+    &__circle {
+        border-radius: 50%;
+        height: 0;
+        padding: 0!important;
+        padding-bottom: 100%!important;
+        width: 100%;
+        font-size: 1.6rem;
+        border: 1px solid black;
+        color: black;
+
+        span {
+            float: left;
+            line-height: 1;
+            padding-top: 50%;
+            text-align: center;
+            width: 100%;
+            margin-top: -0.5em;
+        }
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+
     }
 
     &__default {
@@ -41,21 +85,29 @@
         font-size: 1rem;
     }
 
-    &__medium {
-        padding: 1rem 2.5rem;
-    }
-
     &__small {
         padding: 0.9rem 1.5rem;
         font-size: 0.857rem;
+    }
+
+    &.hover-outline {
+        border: 1px solid transparent;
+
+        &:hover {
+            border-color: black;
+        }
+
+        &.active {
+            background-color: black;
+            color: white;
+        }
+
     }
 
     &:active {
         transform: translateY(2px);
         filter: brightness(75%);
     }
-
-
 
 }
 

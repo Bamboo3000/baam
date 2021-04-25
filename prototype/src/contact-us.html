@@ -1,0 +1,119 @@
+@@include('head.html')
+@@include('nav.html')
+
+<header class="header">
+    <div class="container-fluid">
+        <div class="border-radius pt-5">
+            <div class="container-fluid pt-5">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <img data-src="img/home.gif" alt="" class="lazy img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="copy py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1 class="text-center">
+                    Our offices are in Cambridge, UK
+                </h1>
+                <p class="h4 text-center fw400 font-secondary my-5">
+                   <a href="tel:+441223203090" class="mb-2 d-inline-block">+44 1223 20 30 90</a><br/>
+                   <a href="mailto:info@baamagency.co.uk">info@baamagency.co.uk</a>
+                </p>
+                <p class="h4 text-center fw400 font-secondary">
+                    We’re always keen to meet with interested parties, discuss their needs and explore the basis of a fruitful relationship.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pt-2 pb-5 contact-section px-5">
+    <div class="container-fluid">
+        <div class="card border-0 border-radius-s bg-grey2">
+            <div class="card-body p-4" id="contactCollapses">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <button class="btn btn__medium bg-white black d-block w-100 border-radius-s hover-outline" data-toggle="collapse" href="#contactCollapse1" role="button" aria-expanded="false" aria-controls="contactCollapse1">
+                            Schedule a video call
+                        </button>
+                    </div>
+                    <div class="col-lg-3">
+                        <button class="btn btn__medium bg-white black d-block w-100 border-radius-s hover-outline" data-toggle="collapse" href="#contactCollapse1" role="button" aria-expanded="false" aria-controls="contactCollapse1">
+                            Meet face-to-face
+                        </button>
+                    </div>
+                    <div class="col-lg-3">
+                        <button class="btn btn__medium bg-white black d-block w-100 border-radius-s hover-outline" data-toggle="collapse" href="#contactCollapse1" role="button" aria-expanded="false" aria-controls="contactCollapse1">
+                            Arrange a telephone call
+                        </button>
+                    </div>
+                    <div class="col-lg-3">
+                        <button class="btn btn__medium bg-white black d-block w-100 border-radius-s hover-outline" data-toggle="collapse" href="#contactCollapse2" role="button" aria-expanded="false" aria-controls="contactCollapse2">
+                            Send us a message
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse" id="contactCollapse1" data-parent="#contactCollapses">
+                    <div class="row justify-content-center pt-5">
+                        <div class="col-lg-10 d-flex align-items-center justify-content-between flex-wrap py-5" id="dateContainer">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="contactCollapse2" data-parent="#contactCollapses">
+                    <div class="row pt-5">
+                        <div class="col-12 pt-5">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-6 pb-4">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-lg" id="contactFormName" placeholder="Enter your name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 pb-4">
+                                        <div class="form-group">
+                                            <select name="reason" id="contactFormReason" class="form-control form-control-lg" required>
+                                                <option value="" selected default>Kick off a project</option>
+                                            </select>
+                                            <span class="line"></span>
+                                            <i class="triangle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 pb-4">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-lg" id="contactFormEmail" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 pb-4">
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control form-control-lg" id="contactFormPhone" placeholder="Telephone" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 pb-4">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-lg" id="contactFormNotes" placeholder="Optional notes">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 pb-4">
+                                        <div class="form-group">
+                                            <input type="submit" class="form-control form-control-lg text-white bg-black" id="contactFormSubmit" value="Send">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('footer-con-open.html')

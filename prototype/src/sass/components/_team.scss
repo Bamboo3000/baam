@@ -1,0 +1,54 @@
+.team {
+
+    &__section {
+
+        .sep {
+            position: absolute;
+            width: 0.5px;
+            height: 70%;
+            background-color: white;
+            left: 50%;
+            top: 15%;
+            z-index: 991;
+        }
+
+        &-name {
+            position: absolute;
+            color: white;
+            z-index: 99;
+            top: 140px;
+            left: 100px;
+
+            &.right {
+                left: auto;
+                right: 100px;
+            }
+
+        }
+
+        &-text {
+            color: white;
+            padding: 140px 100px;
+        }
+
+    }
+
+    &__copy {
+
+        .two-columns-big {
+            column-count: 2;
+            column-gap: 400px;
+        }
+
+        .btn__circle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding-bottom: 160px!important;
+            width: 160px;
+        }
+
+    }
+
+}
