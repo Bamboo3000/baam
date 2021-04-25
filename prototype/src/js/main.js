@@ -136,14 +136,34 @@ function getLastDays( cont )
 	console.log(weekdays);
 }
 
+function careersCard()
+{
+	
+	$('.careers__single').on('mouseenter', function() {
+		console.log('12');
+		$('.careers__container').css({ 'background-image' : 'url("'+$(this).data('bg')+'")' });
+	});
+	$('.careers__single').on('mouseleave', function() {
+		console.log('12');
+		$('.careers__container').css({ 'background-image' : 'none' });
+	});
+}
+
 jQuery(document).ready(function() {
 
 	lazyImages();
 	menuOpen();
 	uglyInput();
-	if($('#dateContainer')) {
-		getLastDays( '#dateContainer' );
+	if($('#dateContainer1a')) {
+		getLastDays( '#dateContainer1a' );
 	}
+	if($('#dateContainer1b')) {
+		getLastDays( '#dateContainer1b' );
+	}
+	if($('#dateContainer1c')) {
+		getLastDays( '#dateContainer1c' );
+	}
+	careersCard();
 	var swiper = new Swiper('.swiper-container', {
 		direction: 'horizontal',
 		slidesPerView: 'auto',

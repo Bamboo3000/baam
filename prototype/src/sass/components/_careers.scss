@@ -1,0 +1,19 @@
+.careers {
+
+    &__single {
+
+        &:hover {
+            background-color: white!important;
+            cursor: pointer;
+        }
+
+    }
+
+    &__container {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: all 300ms ease-in-out;
+    }
+
+}

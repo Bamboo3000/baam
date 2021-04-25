@@ -90,6 +90,12 @@
         font-size: 0.857rem;
     }
 
+    &__outline {
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+    }
+
     &.hover-outline {
         border: 1px solid transparent;
 
@@ -97,9 +103,10 @@
             border-color: black;
         }
 
-        &.active {
-            background-color: black;
-            color: white;
+        &.active,
+        &[aria-expanded="true"] {
+            background-color: black!important;
+            color: white!important;
         }
 
     }
@@ -107,6 +114,23 @@
     &:active {
         transform: translateY(2px);
         filter: brightness(75%);
+    }
+
+    &.hover-black {
+
+        &:hover,
+        &.active,
+        &[aria-expanded="true"] {
+            background-color: black;
+            color: white;
+
+            svg,
+            path {
+                fill: white;
+            }
+
+        }
+
     }
 
 }

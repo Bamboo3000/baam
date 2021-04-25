@@ -751,6 +751,12 @@ p,
 	padding: .9rem 1.5rem;
 }
 
+.btn__outline {
+	color: black;
+	border: 1px solid black;
+	background-color: white;
+}
+
 .btn.hover-outline {
 	border: 1px solid transparent;
 }
@@ -759,14 +765,31 @@ p,
 	border-color: black;
 }
 
-.btn.hover-outline.active {
-	color: white;
-	background-color: black;
+.btn.hover-outline.active,
+.btn.hover-outline[aria-expanded='true'] {
+	color: white !important;
+	background-color: black !important;
 }
 
 .btn:active {
 	transform: translateY(2px);
 	filter: brightness(75%);
+}
+
+.btn.hover-black:hover,
+.btn.hover-black.active,
+.btn.hover-black[aria-expanded='true'] {
+	color: white;
+	background-color: black;
+}
+
+.btn.hover-black:hover svg,
+.btn.hover-black:hover path,
+.btn.hover-black.active svg,
+.btn.hover-black.active path,
+.btn.hover-black[aria-expanded='true'] svg,
+.btn.hover-black[aria-expanded='true'] path {
+	fill: white;
 }
 
 .link {
@@ -1119,6 +1142,18 @@ i {
 	transform: translateX(-50%) translateY(-50%);
 }
 
+.careers__single:hover {
+	cursor: pointer;
+	background-color: white !important;
+}
+
+.careers__container {
+	transition: all 300ms ease-in-out;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
 .article {
 	margin-top: 40px;
 	margin-bottom: 70px;
@@ -1232,7 +1267,7 @@ i {
 	height: auto !important;
 	padding: 1.5rem 2rem !important;
 	color: black;
-	border: none !important;
+	border-color: transparent !important;
 	outline: 0;
 	box-shadow: none;
 	-webkit-appearance: none !important;
@@ -1242,12 +1277,18 @@ i {
 
 .contact-section .form-control-lg * {
 	color: black;
-	border: none;
+	border-color: transparent;
 	outline: 0;
 	box-shadow: none;
 	-webkit-appearance: none !important;
 	-moz-appearance: none !important;
 	appearance: none !important;
+}
+
+.contact-section .form-control-lg:hover,
+.contact-section .form-control-lg:active,
+.contact-section .form-control-lg:focus {
+	border-color: black !important;
 }
 
 .contact-section .form-control-lg::-moz-placeholder {
@@ -1267,6 +1308,7 @@ i {
 
 .contact-section .form-control-lg[type='submit'] {
 	height: 100%;
+	border: none !important;
 }
 
 .footer .seps {

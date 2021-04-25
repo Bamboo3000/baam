@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BAAM</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/fa.min.css" media="none" onload="if(media!='all')media='all'">
+        <noscript>
+            <link rel="stylesheet" href="css/fa.min.css"/>
+        </noscript>
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+        <link rel="stylesheet" href="css/main.min.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->           
+        <div id="wrapper">
+<nav class="navigation">
+    <div class="container-fluid">
+        <div class="row justify-content-between align-items-center">
+            <a href="/" class="col-lg-3 logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217 49.9"><path d="M0 48.7c5-.6 6.7-2.4 6.7-9V10.3c0-6.6-1.7-8.4-6.7-9V.5h16.2v48.9H0zM28.3 49.1a47 47 0 01-4.9.3v-.7c8.7-.7 11.2-5 11.2-12.4 0-5.5-2.5-9.5-7-11.4a15.5 15.5 0 00-4.9-1v-.5a14.9 14.9 0 002.9-.6c3.9-1.4 6.3-5.7 6.3-10.6 0-8-3.6-10.6-8.6-11V.5C31.3.5 41 3 41 12.2c0 5.8-5.6 9.9-12.6 11.1v.2c8.6 1 16 4.4 16 13 0 8.3-7 11.6-16.1 12.6zM43.6 49.4v-.7a10.9 10.9 0 006.7-3.4 23 23 0 005.1-8.3l.6.4a27.6 27.6 0 00-.8 5.4c0 3.8 2.7 5.6 6.6 6v.6zm29-18.9H57.8l.7-2h13.3l-6.5-17.9L69.4 0h1.7l15.3 39.6c2.5 6.3 5.4 8.6 9.2 9.1v.7h-24v-.7c3.7-.2 5.5-1.3 5.5-4.3a18.3 18.3 0 00-1.6-6.2z"/><path d="M95.6 49.4v-.7a10.9 10.9 0 006.7-3.4 23 23 0 005.1-8.3l.6.4a27.6 27.6 0 00-.8 5.4c0 3.8 2.7 5.6 6.6 6v.6zm29-18.9h-14.8l.7-2h13.3l-6.5-17.9L121.4 0h1.7l15.3 39.6c2.5 6.3 5.4 8.6 9.2 9.1v.7h-24v-.7c3.7-.2 5.5-1.3 5.5-4.3a18.3 18.3 0 00-1.6-6.2zM147.6 49.4v-.7c3-.2 5.4-1.1 7-3.1 2-2.3 3.7-6.7 4.5-10.4h.8c-.2 3.2.2 8 1.8 10.2s4.2 3.3 7.6 3.3v.7zm34.2.5h-.4l-18.6-38.7c-1.8-3.6-3.4-6-5.6-7.6a13.9 13.9 0 00-6.4-2.4V.5h17.8l18.6 38.8zm17-49.4h16.8v.7c-5.8.5-7 3-6.7 9.4l1 28.6c.3 7 2 9 7.1 9.5v.7h-23.2v-.7c4.5-.5 6.5-2 6.5-7.2v-2.4z"/></svg>
+            </a>
+            <div class="col-auto">
+                <h3 class="font-secondary m-0">Brand development agency</h3>
+            </div>
+            <div class="col-lg-3 text-right">
+                <button class="btn__menu" data-toggle="collapse" href="#navCollapse" role="button" aria-expanded="false" aria-controls="navCollapse">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="collapse position-absolute w-100" id="navCollapse">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-radius-s bg-black text-white text-center p-5">
+                    <ul class="list-unstyled text-size-xlarge">
+                        <li>
+                            <a href="people.html">People</a>
+                        </li>
+                        <li>
+                            <a href="work.html">Work</a>
+                        </li>
+                        <li>
+                            <a href="approach.html">Approach</a>
+                        </li>
+                        <li>
+                            <a href="stories.html">Stories</a>
+                        </li>
+                        <li>
+                            <a href="careers.html">Careers</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container-fluid">
+        <div class="border-radius py-5">
+            <div class="container-fluid py-5">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <img data-src="img/home.gif" alt="" class="lazy img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="copy pb-3">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <p class="h4 text-center fw400 font-secondary">
+                    We’re always keen to meet great people but there are six things worth knowing before choosing to work with us.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="careers px-5 pb-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="careers__container card border-radius border-0 bg-grey3">
+                    <div class="card-body px-3 py-4">
+                        <div class="row">
+                            <div class="col-lg-6 py-3 px-5">
+                                <div class="card border-radius-s border-0 bg-transparent careers__single" data-bg="img/careers1.jpg">
+                                    <div class="card-body p-3">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <span class="h6 font-secondary mb-0">
+                                                01
+                                            </span>
+                                            <span class="h4 font-secondary mb-0">
+                                                Creativity clashes - Will there be any
+                                            </span>
+                                        </div>
+                                        <hr class="my-2 border-dark">
+                                        <p class="font-secondary m-0 text-right">
+                                            Yes but we call it passion.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 py-3 px-5">
+                                <div class="card border-radius-s border-0 bg-transparent careers__single" data-bg="img/Group99.jpg">
+                                    <div class="card-body p-3">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <span class="h6 font-secondary mb-0">
+                                                02
+                                            </span>
+                                            <span class="h4 font-secondary mb-0">
+                                                Creativity clashes - Will there be any
+                                            </span>
+                                        </div>
+                                        <hr class="my-2 border-dark">
+                                        <p class="font-secondary m-0 text-right">
+                                            Yes but we call it passion.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 py-3 px-5">
+                                <div class="card border-radius-s border-0 bg-transparent careers__single" data-bg="img/Group218.jpg">
+                                    <div class="card-body p-3">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <span class="h6 font-secondary mb-0">
+                                                03
+                                            </span>
+                                            <span class="h4 font-secondary mb-0">
+                                                Creativity clashes - Will there be any
+                                            </span>
+                                        </div>
+                                        <hr class="my-2 border-dark">
+                                        <p class="font-secondary m-0 text-right">
+                                            Yes but we call it passion.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 py-3 px-5">
+                                <div class="card border-radius-s border-0 bg-transparent careers__single" data-bg="img/careers1.jpg">
+                                    <div class="card-body p-3">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <span class="h6 font-secondary mb-0">
+                                                04
+                                            </span>
+                                            <span class="h4 font-secondary mb-0">
+                                                Creativity clashes - Will there be any
+                                            </span>
+                                        </div>
+                                        <hr class="my-2 border-dark">
+                                        <p class="font-secondary m-0 text-right">
+                                            Yes but we call it passion.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 py-3 px-5">
+                                <div class="card border-radius-s border-0 bg-transparent careers__single" data-bg="img/Group105.jpg">
+                                    <div class="card-body p-3">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <span class="h6 font-secondary mb-0">
+                                                05
+                                            </span>
+                                            <span class="h4 font-secondary mb-0">
+                                                Creativity clashes - Will there be any
+                                            </span>
+                                        </div>
+                                        <hr class="my-2 border-dark">
+                                        <p class="font-secondary m-0 text-right">
+                                            Yes but we call it passion.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 py-3 px-5">
+                                <div class="card border-radius-s border-0 bg-transparent careers__single" data-bg="img/Group111.jpg">
+                                    <div class="card-body p-3">
+                                        <div class="d-flex align-items-end justify-content-between">
+                                            <span class="h6 font-secondary mb-0">
+                                                06
+                                            </span>
+                                            <span class="h4 font-secondary mb-0">
+                                                Creativity clashes - Will there be any
+                                            </span>
+                                        </div>
+                                        <hr class="my-2 border-dark">
+                                        <p class="font-secondary m-0 text-right">
+                                            Yes but we call it passion.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-12 text-center pb-5">
+                <h4 class="font-secondary mb-4">
+                    Currently seeking
+                </h4>
+                <h6 class="font-secondary mb-4">
+                    Strategist<br/>
+                    Marketing / Business development<br/>
+                    Middleweight designer<br/>
+                    Artworker<br/>
+                </h6>
+                <h4 class="mb-5">Email: <a href="mailto:dave@baamagency.co.uk" class="h4 mb-5">dave@baamagency.co.uk</a></h4>
+                <img data-src="img/dave.jpg" alt="" class="lazy">
+            </div>
+            <div class="col-12 text-center pt-5">
+                <a href="contact-us.html" class="btn btn__big bg-black border-radius-s font-secondary">
+                    Get in touch
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <footer class="footer mb-n5">
+                <div class="container-fluid">
+                    <div class="card border-0 border-radius-s copy-card horizontal bg-grey2 pb-5 px-2">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 d-flex align-items-center justify-content-start">
+                                <a class="flex-grow-0 btn btn__high small font-secondary text-left" data-toggle="collapse" href="#footerCollapse" role="button" aria-expanded="false" aria-controls="footerCollapse">
+                                    BAAM - Brownstone Advertising & Marketing Ltd
+                                </a>
+                                <span class="seps">
+                                    |
+                                </span>
+                                <a href="tel:+4401223203090" class="flex-grow-0 btn btn__high small font-secondary">
+                                    01223 20 30 90
+                                </a>
+                            </div>
+                            <div class="col-lg-2 py-1 text-center">
+                                <a href="contact-us.html" class="btn btn__high font-secondary">
+                                    Contact
+                                </a>
+                            </div>
+                            <div class="col-lg-5 d-flex align-items-center justify-content-end">
+                                <a href="" class="flex-grow-0 m-0 btn btn__high small font-secondary">
+                                    Privacy
+                                </a>
+                                <span class="seps">
+                                    |
+                                </span>
+                                <a href="" class="flex-grow-0 m-0 btn btn__high small font-secondary">
+                                    Terms
+                                </a>
+                            </div>
+                        </div>
+                        <div class="collapse pristine" id="footerCollapse">
+                            <div class="row">
+                                <div class="col-auto px-5 py-4 font-secondary">
+                                    <p class="mt-0 mb-3">
+                                        <a href="https://www.google.com/maps/dir/52.3505549,-0.1814928/The+Bradfield+Centre+Cambridge+Science+Park+Cambridge+CB3+9PP/@52.283738,-0.1592558,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47d870545e4ef491:0x410ce131c2898905!2m2!1d0.1463073!2d52.2336488" target="_blank">
+                                            The Bradfield Centre<br/>
+                                            Cambridge Science Park<br/>
+                                            Cambridge<br/>
+                                            CB3 9PP
+                                        </a>
+                                    </p>
+                                    <a class="mb-3 d-inline-block" href="tel:+441223203090">01223 20 30 90</a><br/>
+                                    <a class="mb-3 d-inline-block" href="mailto:info@baamagency.co.uk">info@baamagency.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div> <!-- #wrapper -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous" defer></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/main.min.js" defer></script>
+    </body>
+</html>

@@ -67,7 +67,7 @@
         padding: 1.5rem 2rem!important;
         height: auto!important;
         display: block;
-        border: none!important;
+        border-color: transparent!important;
         color: black;
         outline: 0;
         box-shadow: none;
@@ -76,11 +76,17 @@
         @extend .border-radius-s;
 
         * {
-            border: none;
+            border-color: transparent;
             color: black;
             outline: 0;
             box-shadow: none;
             appearance: none!important;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: black!important;
         }
 
         &::placeholder {
@@ -90,6 +96,7 @@
 
         &[type="submit"] {
             height: 100%;
+            border: none!important;
         }
 
     }
