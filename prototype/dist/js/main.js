@@ -282,6 +282,23 @@ function careersCard()
 	});
 }
 
+function videoPlay()
+{
+	$('video').on('click', function() {
+		if( $(this).get(0).paused ) {
+			$(this).get(0).play();
+			$(this).next('.video-play').hide(0);
+		} else {
+			$(this).get(0).pause();
+			$(this).next('.video-play').show(0);
+		}
+	});
+	$('.video-play').on('click', function() {
+		$(this).prev('video').get(0).play();
+		$(this).hide(0);
+	});
+}
+
 jQuery(document).ready(function() {
 
 	lazyImages();
@@ -308,6 +325,8 @@ jQuery(document).ready(function() {
 	});
 	//feather.replace();
 	//productImgHover();
+
+	videoPlay();
 
 	$('#footerCollapse').on('shown.bs.collapse', function () {
 		if( $(this).hasClass('pristine') ) {

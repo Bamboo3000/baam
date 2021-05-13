@@ -1,15 +1,24 @@
 .navigation {
     position: relative;
     z-index: 999;
-    padding: 80px 50px 60px;
+    padding: 64px;
 
+    @media(max-width: 991px) {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
 
     .logo {
         position: relative;
 
         img,
         svg {
-            max-width: 210px;
+            max-width: 152px;
+
+            @media(max-width: 575px) {
+                max-width: 114px;
+            }
+
         }
 
     }
@@ -21,8 +30,8 @@
         box-shadow: none;
         position: relative;
         background: transparent;
-        width: 90px;
-        height: 45px;
+        width: 50px;
+        height: 30px;
         transform: rotate(0deg);
         transition: all 250ms ease-in-out;
         cursor: pointer;
@@ -30,10 +39,11 @@
         span {
             display: block;
             position: absolute;
-            height: 5px;
+            height: 4px;
             width: 100%;
             background: black;
-            border-radius: 5px;
+            border-radius: 10px!important;
+            overflow: hidden;
             opacity: 1;
             left: 0;
             transform: rotate(0deg);
@@ -45,24 +55,22 @@
 
             &:nth-child(2),
             &:nth-child(3) {
-                top: 18px;
+                top: 13px;
             }
 
             &:nth-child(4) {
-                top: 36px;
+                top: 26px;
             }
 
         }
 
         &.active {
-            width: 70px;
-            margin-right: 10px;
 
             span {
 
                 &:nth-child(1),
                 &:nth-child(4) {
-                    top: 18px;
+                    top: 13px;
                     width: 0%;
                     left: 50%;
                 }
@@ -84,13 +92,40 @@
 }
 
 #navCollapse {
-    padding: 0 50px;
+    padding: 0 64px;
     z-index: 999;
+
+    @media(max-width: 1440px) {
+        margin-top: -32px;
+    }
+
+    @media(max-width: 991px) {
+        padding: 0 48px;
+    }
+
+    @media(max-width: 575px) {
+        font-size: 1.875rem;
+    }
 
     ul {
 
         li {
-            padding: 0.9rem 0;
+            padding: 1.5rem 0;
+            font-size: 3.125rem;
+            line-height: 1;
+
+            @media(max-width: 1440px) {
+                font-size: 2.5rem;
+            }
+        
+            @media(max-width: 991px) {
+                font-size: 2.1875rem;
+            }
+        
+            @media(max-width: 575px) {
+                font-size: 1.875rem;
+            }
+
         }
 
     }
