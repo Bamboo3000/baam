@@ -12,8 +12,8 @@
         }
 
         .btn__circle {
-            width: 160px;
-            padding-bottom: 160px!important;
+            width: 120px;
+            padding-bottom: 120px!important;
             background-color: white;
             border-color: white;
 
@@ -42,29 +42,29 @@
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 35px 25px 0 25px;
+            border-width: 20px 15px 0 15px;
             border-color: #000000 transparent transparent transparent;
             position: absolute;
-            top: 30px;
-            right: 50px;
+            top: 25px;
+            right: 40px;
             pointer-events: none;
         }
 
         .line {
-            height: 70px;
+            height: 48px;
             width: 1px;
             background-color: black;
             position: absolute;
             top: 10px;
-            right: 135px;
+            right: 90px;
             pointer-events: none;
         }
 
     }
 
     .form-control-lg {
-        font-size: 1.7rem!important;
-        padding: 1.5rem 2rem!important;
+        font-size: 1.25rem!important;
+        padding: 1.25rem 2rem!important;
         height: auto!important;
         display: block;
         border-color: transparent!important;
