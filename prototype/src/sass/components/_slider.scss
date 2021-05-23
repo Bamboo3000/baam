@@ -1,7 +1,15 @@
 .slider {
+  .swiper-slide {
+    max-width: 80vw;
+    position: relative;
+    padding-top: 40%;
+		overflow: hidden;
 
-    .swiper-slide {
-        max-width: 80vw;
+    img,
+    video,
+    picture {
+      position: absolute;
+      top: 0;
     }
-
+  }
 }

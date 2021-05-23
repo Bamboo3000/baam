@@ -689,6 +689,17 @@ p,
 	border: none !important;
 }
 
+.btn i {
+	position: relative;
+	transition: all 200ms ease-out;
+}
+
+.btn:hover i,
+.btn:focus i,
+.btn:active i {
+	transform: translateX(10px);
+}
+
 .btn.white {
 	color: white !important;
 }
@@ -700,6 +711,12 @@ p,
 .btn.bg-black {
 	color: white !important;
 	background-color: black !important;
+}
+
+.btn.bg-black:hover,
+.btn.bg-black:focus,
+.btn.bg-black:active {
+	background-color: ligther(black, 10%);
 }
 
 .btn__big {
@@ -722,10 +739,15 @@ p,
 	padding: 1.7rem 2rem;
 }
 
-.btn__high:hover,
 .btn__high[aria-expanded='true'] {
 	color: white;
 	background-color: black;
+}
+
+.btn__high:hover,
+.btn__high:focus,
+.btn__high:active {
+	background-color: lighter(black, 10%);
 }
 
 .btn__circle {
@@ -1146,7 +1168,17 @@ i {
 }
 
 .slider .swiper-slide {
+	position: relative;
+	overflow: hidden;
 	max-width: 80vw;
+	padding-top: 40%;
+}
+
+.slider .swiper-slide img,
+.slider .swiper-slide video,
+.slider .swiper-slide picture {
+	position: absolute;
+	top: 0;
 }
 
 .team__section .sep {
