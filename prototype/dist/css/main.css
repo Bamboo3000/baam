@@ -1035,6 +1035,15 @@ i {
 	color: #383a3e;
 }
 
+.card-reveal {
+	transition: all 300ms ease-out;
+	text-align: center;
+}
+
+.card-reveal + div {
+	transition: all 300ms ease-out;
+}
+
 .card-reveal .card-hover-content {
 	display: none;
 	opacity: 0;
@@ -1043,29 +1052,31 @@ i {
 .card-reveal * {
 	position: relative;
 	z-index: 9;
+	transition: all 300ms ease-out;
 }
 
-.card-reveal:after {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	width: 0;
-	height: 100%;
-	content: '';
-	border-radius: 9999px;
-	background-color: #3f4c5a;
+.card-reveal:hover {
+	max-width: calc( 41.666667% + 300px) !important;
+	flex: 0 0 calc( 41.666667% + 300px) !important;
+}
+
+.card-reveal:hover + div {
+	margin-left: -300px;
+}
+
+.card-reveal:hover .card {
+	border-top-right-radius: 300px !important;
+	border-bottom-right-radius: 300px !important;
+}
+
+.card-reveal:hover .card-body {
+	text-align: left !important;
+	justify-content: flex-start !important;
 }
 
 .card-reveal:hover .card-hover-content {
 	display: block;
 	opacity: 1;
-}
-
-.card-reveal:hover:after {
-	right: -40%;
-	width: 100%;
 }
 
 .navigation {

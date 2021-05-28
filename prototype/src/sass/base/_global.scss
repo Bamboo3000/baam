@@ -1,30 +1,30 @@
 // Global CSS goes here
 html,
 body {
-	max-width: 100%;
-	max-width: 100vw;
-	overflow-x: hidden;
-	font-weight: 400;
-    font-size: 16px;
-	color: $color-primary;
-	background-color: white;
-	font-family: $font-primary;
+  max-width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-primary;
+  background-color: white;
+  font-family: $font-primary;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	position: relative;
-	display: block;
-	min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+  min-height: 100vh;
 }
 
 * {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img,
@@ -34,37 +34,35 @@ picture,
 embed,
 iframe,
 video {
-	max-width: 100%;
-	height: auto;
-	vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 object,
 svg {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
-	outline: none;
-	border: none;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  border: none;
 
-	&:hover {
-		color: $color-grey6;
-		text-decoration: none;
-	}
-
+  &:hover {
+    color: $color-grey6;
+    text-decoration: none;
+  }
 }
 
 ul {
-	margin: 0;
+  margin: 0;
 
-	li {
-		line-height: 1.44;
-		padding: 0.5rem 0;
-	}
-
+  li {
+    line-height: 1.44;
+    padding: 0.5rem 0;
+  }
 }
 
 input,
@@ -72,177 +70,195 @@ select,
 textarea,
 button,
 label {
-	font-family: $font-primary;
+  font-family: $font-primary;
 }
 
 section {
-	width: 100%;
-	position: relative;
-	display: block;
+  width: 100%;
+  position: relative;
+  display: block;
 }
 
 i {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 .container {
-	position: relative;
+  position: relative;
 }
 
 #wrapper {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	min-height: 100vh;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
 .bg-cover {
-	display: block;
-	width: 100%;
-	max-width: 100vw;
-	object-fit: cover;
-	overflow: hidden;
+  display: block;
+  width: 100%;
+  max-width: 100vw;
+  object-fit: cover;
+  overflow: hidden;
 
-	&-abs {
-		display: block;
-		width: 100%;
-		max-width: 100vw;
-		height: 100%;
-		object-fit: cover;
-		position: absolute;
-	}
+  &-abs {
+    display: block;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
 
-	&.scale { 
-		transform: scale(1.05);
-	}
-
+  &.scale {
+    transform: scale(1.05);
+  }
 }
 
 .video-bg {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .over-50 {
-	background-color: rgba($color: #000000, $alpha: 0.5);
-	position: absolute;
-	height: 100%;
-	width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .whole-element-link {
-	position: absolute;
-	display: block;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 9;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
 }
 
 .absolute-center {
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	left: 50%;
-	transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 
-.embed-container { 
-	position: relative; 
-	padding-bottom: 56.25%; 
-	height: 0; 
-	overflow: hidden; 
-	max-width: 100%; 
-} 
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
 
-.embed-container iframe, 
-.embed-container object, 
-.embed-container embed { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	width: 100%; 
-	height: 100%; 
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .padding {
-	padding-left: 64px!important;
-	padding-right: 64px!important;
+  padding-left: 64px !important;
+  padding-right: 64px !important;
 }
 
 .margin {
-	margin-left: 64px!important;
-	margin-right: 64px!important;
+  margin-left: 64px !important;
+  margin-right: 64px !important;
 }
 
 .video-play {
-	width: 60px;
-	height: 60px;
-	border-radius: 60px;
-	background-color: $color-grey4;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -30px;
-	margin-top: -30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: $color-grey4;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	i {
-		position: absolute;
-		color: $color-grey8;
-		font-size: 1.875rem;
-		margin-right: -0.3rem;
-	}
-
+  i {
+    position: absolute;
+    color: $color-grey8;
+    font-size: 1.875rem;
+    margin-right: -0.3rem;
+  }
 }
 
 .card-reveal {
+  text-align: center;
+  @include trans(300ms);
 
-	.card-hover-content {
-		display: none;
-		opacity: 0;
+	&+div {
+		@include trans(300ms);
 	}
 
-	* {
-		position: relative;
-		z-index: 9;
-	}
+  .card-hover-content {
+    display: none;
+    opacity: 0;
+  }
 
-	&:after {
-		position: absolute;
-		content: '';
-		z-index: 1;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		height: 100%;
-		width: 0;
-		border-radius: 9999px;
-		background-color: $color-grey7;
-	}
+  * {
+    position: relative;
+    z-index: 9;
+    @include trans(300ms);
+  }
 
-	&:hover {
+  // &:after {
+  // 	position: absolute;
+  // 	content: '';
+  // 	z-index: 1;
+  // 	top: 0;
+  // 	right: 40%;
+  // 	bottom: 0;
+  // 	height: 100%;
+  // 	width: 0;
+  // 	border-radius: 9999px;
+  // 	background-color: $color-grey7;
+  // 	@include trans(300ms);
+  // }
 
-		.card-hover-content {
-			display: block;
-			opacity: 1;
+  &:hover {
+		flex: 0 0 calc( 41.666667% + 300px )!important;
+    max-width: calc( 41.666667% + 300px )!important;
+
+		&+div {
+			margin-left: -300px;
 		}
 
-		&:after {
-			right: -40%;
-			width: 100%;
-		}
+    .card {
+      border-top-right-radius: 300px !important;
+      border-bottom-right-radius: 300px !important;
+    }
 
-	}
+    .card-body {
+      text-align: left !important;
+      justify-content: flex-start !important;
+    }
 
-	
+    .card-hover-content {
+      display: block;
+      opacity: 1;
+    }
 
+    // &:after {
+    // 	right: -40%;
+    // 	width: 100%;
+    // }
+  }
 }
 
 // .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
