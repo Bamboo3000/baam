@@ -202,6 +202,49 @@ i {
 
 }
 
+.card-reveal {
+
+	.card-hover-content {
+		display: none;
+		opacity: 0;
+	}
+
+	* {
+		position: relative;
+		z-index: 9;
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		z-index: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		width: 0;
+		border-radius: 9999px;
+		background-color: $color-grey7;
+	}
+
+	&:hover {
+
+		.card-hover-content {
+			display: block;
+			opacity: 1;
+		}
+
+		&:after {
+			right: -40%;
+			width: 100%;
+		}
+
+	}
+
+	
+
+}
+
 // .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
 // 	padding-left: 20px;
 // 	padding-right: 20px;

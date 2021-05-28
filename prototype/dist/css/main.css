@@ -1035,6 +1035,39 @@ i {
 	color: #383a3e;
 }
 
+.card-reveal .card-hover-content {
+	display: none;
+	opacity: 0;
+}
+
+.card-reveal * {
+	position: relative;
+	z-index: 9;
+}
+
+.card-reveal:after {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 100%;
+	content: '';
+	border-radius: 9999px;
+	background-color: #3f4c5a;
+}
+
+.card-reveal:hover .card-hover-content {
+	display: block;
+	opacity: 1;
+}
+
+.card-reveal:hover:after {
+	right: -40%;
+	width: 100%;
+}
+
 .navigation {
 	position: relative;
 	z-index: 999;
