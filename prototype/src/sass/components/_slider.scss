@@ -1,15 +1,38 @@
 .slider {
   .swiper-slide {
-    max-width: 80vw;
+    max-width: 40vw;
     position: relative;
-    padding-top: 40%;
-		overflow: hidden;
+    padding-top: 22.4vw;
+    overflow: hidden;
+    background-color: black;
 
     img,
     video,
     picture {
       position: absolute;
       top: 0;
+      @include trans(300ms);
+    }
+
+    .btn {
+      z-index: 99;
+      position: absolute;
+      bottom: 10px;
+      right: -15%;
+      opacity: 0;
+      @include trans(300ms);
+    }
+
+    &:hover {
+      .btn {
+        right: 10px;
+        opacity: 1;
+      }
+
+      img,
+      picture {
+        opacity: 0.66;
+      }
     }
   }
 }

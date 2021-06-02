@@ -14,7 +14,13 @@
 						</div>
 					<?php endif; ?>
 					<?php if (isset($slide['link']) && $slide['link']) : ?>
-						<a href="<?php echo $slide['link']['url']; ?>" class="whole-element-link"></a>
+						<?php if ($slide['slide_type'] == 'image') : ?>
+							<a href="<?php echo $slide['link']['url']; ?>" class="whole-element-link"></a>
+						<?php endif; ?>
+						<a href="<?php echo $slide['link']['url']; ?>" class="btn btn__small bg-white border-radius-s">
+							<?php echo $slide['link']['title']; ?>
+							<i class="fa fa-arrow-right ml-2"></i>
+						</a>
 					<?php endif; ?>
 				</div>
 			<?php endforeach; ?>

@@ -37,6 +37,7 @@ video {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+	position: relative;
 }
 
 object,
@@ -202,9 +203,9 @@ i {
   text-align: center;
   @include trans(300ms);
 
-	&+div {
-		@include trans(300ms);
-	}
+  & + div {
+    @include trans(300ms);
+  }
 
   .card-hover-content {
     display: none;
@@ -232,12 +233,12 @@ i {
   // }
 
   &:hover {
-		flex: 0 0 calc( 41.666667% + 300px )!important;
-    max-width: calc( 41.666667% + 300px )!important;
+    flex: 0 0 calc(41.666667% + 300px) !important;
+    max-width: calc(41.666667% + 300px) !important;
 
-		&+div {
-			margin-left: -300px;
-		}
+    & + div {
+      margin-left: -300px;
+    }
 
     .card {
       border-top-right-radius: 300px !important;
@@ -259,6 +260,22 @@ i {
     // 	width: 100%;
     // }
   }
+}
+
+.above-the-fold {
+  max-height: calc(100vh - 180px);
+	min-height: 500px;
+	height: auto;
+
+	// header.header {
+
+	// 	picture, img {
+	// 		//position: relative;
+	// 		height: 50%;
+	// 	}
+
+	// }
+
 }
 
 // .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
