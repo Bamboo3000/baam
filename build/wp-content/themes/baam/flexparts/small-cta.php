@@ -12,7 +12,7 @@
 							</div>
 						<?php endif; ?>
 						<?php if (get_sub_field('link')) : ?>
-							<div class="col-md-auto pl-5">
+							<div class="col-md-auto<?php echo get_sub_field('text') ? ' pl-5' : null; ?>">
 								<a href="<?php echo get_sub_field('link')['url']; ?>" class="btn btn__big bg-grey8 color-white border-radius-s">
 									<?php echo get_sub_field('link')['title']; ?>
 								</a>

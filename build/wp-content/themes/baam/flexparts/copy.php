@@ -4,7 +4,7 @@
 			<?php if (get_sub_field('width') == 'narrow') : ?>
 			<div class="col-lg-4">
 			<?php elseif (get_sub_field('width') == 'medium') : ?>
-			<div class="col-lg-9">
+			<div class="col-lg-7">
 			<?php elseif (get_sub_field('width') == 'wide') : ?>
 			<div class="col-12">
 			<?php endif; ?>

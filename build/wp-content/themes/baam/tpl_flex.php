@@ -6,10 +6,10 @@
 
 get_header(); ?>
 
-<?php if (have_rows('above_the_fold')) : ?>
-	<section class="above-the-fold">
-		<?php while (have_rows('above_the_fold')) : the_row(); ?>
-			<?php if (have_rows('sections_above_the_fold')) : ?>
+<?php if (get_field('above_the_fold') && have_rows('above_the_fold')) : ?>
+	<?php while (have_rows('above_the_fold')) : the_row(); ?>
+		<?php if (have_rows('sections_above_the_fold')) : ?>
+			<section class="above-the-fold">
 				<?php while (have_rows('sections_above_the_fold')) : the_row(); ?>
 					<?php if (get_row_layout() == 'big_cta_section' && get_sub_field('link')) : ?>
 						<?php get_template_part('flexparts/big-cta'); ?>
@@ -29,9 +29,9 @@ get_header(); ?>
 						<?php get_template_part('flexparts/columns-cta'); ?>
 					<?php endif; ?>
 				<?php endwhile; ?>
-			<?php endif; ?>
-		<?php endwhile; ?>
-	</section>
+			</section>
+		<?php endif; ?>
+	<?php endwhile; ?>
 <?php endif; ?>
 
 <?php if (have_rows('sections')) : ?>
@@ -54,6 +54,8 @@ get_header(); ?>
 			<?php get_template_part('flexparts/columns-cta'); ?>
 		<?php elseif (get_row_layout() == 'contact_form' && get_sub_field('contact_form')) : ?>
 			<?php get_template_part('flexparts/contact-form'); ?>
+		<?php elseif (get_row_layout() == 'careers' && get_sub_field('contact_form')): ?>
+			<?php get_template_part('flexparts/careers'); ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>
