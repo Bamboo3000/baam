@@ -20,17 +20,17 @@ get_header();
 						<div class="card-body p-0 m-0">
 							<div class="row">
 								<div class="col-lg-4">
-									<a href="" class="btn btn__medium w-100 hover-black border-radius-s active">
+									<a href="<?php echo get_post_type_archive_link( 'post' ); ?>" class="btn btn__medium w-100 hover-black border-radius-s active">
 										Everything
 									</a>
 								</div>
 								<div class="col-lg-4">
-									<a href="" class="btn btn__medium w-100 hover-black border-radius-s">
+									<a href="/category/case-studies" class="btn btn__medium w-100 hover-black border-radius-s">
 										Case studies
 									</a>
 								</div>
 								<div class="col-lg-4">
-									<a href="" class="btn btn__medium w-100 hover-black border-radius-s">
+									<a href="/category/news" class="btn btn__medium w-100 hover-black border-radius-s">
 										News
 									</a>
 								</div>
