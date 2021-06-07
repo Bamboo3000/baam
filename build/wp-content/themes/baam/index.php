@@ -37,7 +37,7 @@ get_header();
 							</div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="stories-row row">
 						<?php
 						/* Start the Loop */
 						$i = 0;
@@ -56,7 +56,7 @@ get_header();
 							* If you want to override this in a child theme, then include a file
 							* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 							*/ ?>
-							<div class="<?php echo $class; ?> pb-4">
+							<article class="story-card <?php echo $class; ?> pb-4">
 								<div class="card border-radius overflow-hidden border-0 h-100">
 									<div class="card-body p-0 h-100 d-flex">
 										<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
@@ -67,7 +67,7 @@ get_header();
 										</div>
 									</div>
 								</div>
-							</div>
+							</article>
 						<?php // get_template_part('template-parts/content', get_post_type());
 						$i++;
 						endwhile;
