@@ -282,6 +282,49 @@ i {
 	// }
 
 }
+#sb_instagram {
+	#sbi_load {
+		display: flex;
+		align-items: center;
+		justify-content: stretch;
+		@media(max-width: 1799px) {
+			flex-wrap: wrap;
+		}
+		.sbi_load_btn {
+			width: 50%;
+			@extend .btn;
+			@extend .btn__medium;
+			@extend .btn__outline;
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			background: transparent!important;
+			margin-left: 4px;
+			@media(max-width: 1799px) {
+				width: 100%;
+				margin-right: 4px;
+			}
+		}
+		.sbi_follow_btn {
+			width: 50%;
+			margin-right: 4px;
+			@media(max-width: 1799px) {
+				margin-left: 4px;
+				width: 100%;
+			}
+		}
+		.sbi_follow_btn a {
+			@extend .btn;
+			@extend .btn.black;
+			@extend .btn__medium;
+			border: 1px solid black;
+			width: 100%;
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			background: black!important;
+			color: white!important;
+		}
+	}
+}
 
 // .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
 // 	padding-left: 20px;

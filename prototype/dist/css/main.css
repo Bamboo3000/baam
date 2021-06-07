@@ -673,7 +673,9 @@ p,
 	line-height: 1 !important;
 }
 
-.btn {
+.btn,
+#sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a {
 	font-weight: 400;
 	line-height: 1;
 	position: relative;
@@ -685,37 +687,61 @@ p,
 }
 
 .btn:before,
-.btn:after {
+#sb_instagram #sbi_load .sbi_load_btn:before,
+#sb_instagram #sbi_load .sbi_follow_btn a:before,
+.btn:after,
+#sb_instagram #sbi_load .sbi_load_btn:after,
+#sb_instagram #sbi_load .sbi_follow_btn a:after {
 	border: none !important;
 }
 
-.btn i {
+.btn i,
+#sb_instagram #sbi_load .sbi_load_btn i,
+#sb_instagram #sbi_load .sbi_follow_btn a i {
 	position: relative;
 	transition: all 200ms ease-out;
 }
 
 .btn:hover i,
+#sb_instagram #sbi_load .sbi_load_btn:hover i,
+#sb_instagram #sbi_load .sbi_follow_btn a:hover i,
 .btn:focus i,
-.btn:active i {
+#sb_instagram #sbi_load .sbi_load_btn:focus i,
+#sb_instagram #sbi_load .sbi_follow_btn a:focus i,
+.btn:active i,
+#sb_instagram #sbi_load .sbi_load_btn:active i,
+#sb_instagram #sbi_load .sbi_follow_btn a:active i {
 	transform: translateX(10px);
 }
 
-.btn.white {
+.btn.white,
+#sb_instagram #sbi_load .white.sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a.white {
 	color: white !important;
 }
 
-.btn.black {
+.btn.black,
+#sb_instagram #sbi_load .black.sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a {
 	color: black !important;
 }
 
-.btn.bg-black {
+.btn.bg-black,
+#sb_instagram #sbi_load .bg-black.sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a.bg-black {
 	color: white !important;
 	background-color: black !important;
 }
 
 .btn.bg-black:hover,
+#sb_instagram #sbi_load .bg-black.sbi_load_btn:hover,
+#sb_instagram #sbi_load .sbi_follow_btn a.bg-black:hover,
 .btn.bg-black:focus,
-.btn.bg-black:active {
+#sb_instagram #sbi_load .bg-black.sbi_load_btn:focus,
+#sb_instagram #sbi_load .sbi_follow_btn a.bg-black:focus,
+.btn.bg-black:active,
+#sb_instagram #sbi_load .bg-black.sbi_load_btn:active,
+#sb_instagram #sbi_load .sbi_follow_btn a.bg-black:active {
 	background-color: ligther(black, 10%);
 }
 
@@ -724,7 +750,9 @@ p,
 	padding: 1rem 2rem;
 }
 
-.btn__medium {
+.btn__medium,
+#sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a {
 	font-size: 1.25rem;
 	padding: 1.25rem 3rem;
 }
@@ -786,44 +814,73 @@ p,
 	padding: .9rem 1.5rem;
 }
 
-.btn__outline {
+.btn__outline,
+#sb_instagram #sbi_load .sbi_load_btn {
 	color: black;
 	border: 1px solid black;
 	background-color: white;
 }
 
-.btn.hover-outline {
+.btn.hover-outline,
+#sb_instagram #sbi_load .hover-outline.sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-outline {
 	border: 1px solid transparent;
 }
 
-.btn.hover-outline:hover {
+.btn.hover-outline:hover,
+#sb_instagram #sbi_load .hover-outline.sbi_load_btn:hover,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-outline:hover {
 	border-color: black;
 }
 
 .btn.hover-outline.active,
-.btn.hover-outline[aria-expanded='true'] {
+#sb_instagram #sbi_load .hover-outline.active.sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-outline.active,
+.btn.hover-outline[aria-expanded='true'],
+#sb_instagram #sbi_load .hover-outline.sbi_load_btn[aria-expanded='true'],
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-outline[aria-expanded='true'] {
 	color: white !important;
 	background-color: black !important;
 }
 
-.btn:active {
+.btn:active,
+#sb_instagram #sbi_load .sbi_load_btn:active,
+#sb_instagram #sbi_load .sbi_follow_btn a:active {
 	transform: translateY(2px);
 	filter: brightness(75%);
 }
 
 .btn.hover-black:hover,
+#sb_instagram #sbi_load .hover-black.sbi_load_btn:hover,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black:hover,
 .btn.hover-black.active,
-.btn.hover-black[aria-expanded='true'] {
+#sb_instagram #sbi_load .hover-black.active.sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black.active,
+.btn.hover-black[aria-expanded='true'],
+#sb_instagram #sbi_load .hover-black.sbi_load_btn[aria-expanded='true'],
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black[aria-expanded='true'] {
 	color: white;
 	background-color: black;
 }
 
 .btn.hover-black:hover svg,
+#sb_instagram #sbi_load .hover-black.sbi_load_btn:hover svg,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black:hover svg,
 .btn.hover-black:hover path,
+#sb_instagram #sbi_load .hover-black.sbi_load_btn:hover path,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black:hover path,
 .btn.hover-black.active svg,
+#sb_instagram #sbi_load .hover-black.active.sbi_load_btn svg,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black.active svg,
 .btn.hover-black.active path,
+#sb_instagram #sbi_load .hover-black.active.sbi_load_btn path,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black.active path,
 .btn.hover-black[aria-expanded='true'] svg,
-.btn.hover-black[aria-expanded='true'] path {
+#sb_instagram #sbi_load .hover-black.sbi_load_btn[aria-expanded='true'] svg,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black[aria-expanded='true'] svg,
+.btn.hover-black[aria-expanded='true'] path,
+#sb_instagram #sbi_load .hover-black.sbi_load_btn[aria-expanded='true'] path,
+#sb_instagram #sbi_load .sbi_follow_btn a.hover-black[aria-expanded='true'] path {
 	fill: white;
 }
 
@@ -1091,6 +1148,34 @@ i {
 	visibility: hidden !important;
 }
 
+#sb_instagram #sbi_load {
+	display: flex;
+	align-items: center;
+	justify-content: stretch;
+}
+
+#sb_instagram #sbi_load .sbi_load_btn {
+	width: 50%;
+	margin-left: 4px;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	background: transparent !important;
+}
+
+#sb_instagram #sbi_load .sbi_follow_btn {
+	width: 50%;
+	margin-right: 4px;
+}
+
+#sb_instagram #sbi_load .sbi_follow_btn a {
+	width: 100%;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	color: white !important;
+	border: 1px solid black;
+	background: black !important;
+}
+
 .navigation {
 	position: relative;
 	z-index: 999;
@@ -1239,7 +1324,11 @@ i {
 	transition: all 300ms ease-out;
 }
 
-.slider .swiper-slide .btn {
+.slider .swiper-slide .btn,
+.slider .swiper-slide #sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram #sbi_load .slider .swiper-slide .sbi_load_btn,
+.slider .swiper-slide #sb_instagram #sbi_load .sbi_follow_btn a,
+#sb_instagram #sbi_load .sbi_follow_btn .slider .swiper-slide a {
 	position: absolute;
 	z-index: 99;
 	right: -15%;
@@ -1248,7 +1337,11 @@ i {
 	opacity: 0;
 }
 
-.slider .swiper-slide:hover .btn {
+.slider .swiper-slide:hover .btn,
+.slider .swiper-slide:hover #sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram #sbi_load .slider .swiper-slide:hover .sbi_load_btn,
+.slider .swiper-slide:hover #sb_instagram #sbi_load .sbi_follow_btn a,
+#sb_instagram #sbi_load .sbi_follow_btn .slider .swiper-slide:hover a {
 	right: 10px;
 	opacity: 1;
 }
@@ -1357,8 +1450,17 @@ i {
 	color: #f00;
 }
 
-.article article .btn {
+.article article .btn,
+.article article #sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram #sbi_load .article article .sbi_load_btn,
+.article article #sb_instagram #sbi_load .sbi_follow_btn a,
+#sb_instagram #sbi_load .sbi_follow_btn .article article a {
 	margin-top: 30px;
+}
+
+.stories-article figure {
+	margin-right: 0;
+	margin-left: 0;
 }
 
 .contact-section .dateChoose {
@@ -2941,6 +3043,24 @@ fieldset[disabled] .datepicker table tr td span.active:hover:hover {
 	margin-left: -5px;
 	padding: 4px 5px;
 	border-width: 1px 0;
+}
+
+@media (max-width: 1799px) {
+
+#sb_instagram #sbi_load {
+	flex-wrap: wrap;
+}
+
+#sb_instagram #sbi_load .sbi_load_btn {
+	width: 100%;
+	margin-right: 4px;
+}
+
+#sb_instagram #sbi_load .sbi_follow_btn {
+	width: 100%;
+	margin-left: 4px;
+}
+
 }
 
 @media (max-width: 1440px) {
