@@ -345,7 +345,6 @@ function aboveTheFold() {
 
 jQuery(document).ready(function () {
   lazyImages();
-	aboveTheFold();
   menuOpen();
   uglyInput();
   if ($("#dateContainer1a")) {
