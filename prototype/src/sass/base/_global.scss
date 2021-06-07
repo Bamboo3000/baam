@@ -267,6 +267,11 @@ i {
 	min-height: 500px;
 	height: auto;
 
+	&:empty {
+		display: none!important;
+		visibility: hidden!important;
+	}
+
 	// header.header {
 
 	// 	picture, img {

@@ -263,16 +263,17 @@ function getLastDays(cont) {
     today.setDate(today.getDate() + 1);
     var day = today.getDate();
     var weekday = today.getDay();
+    console.log(days);
     if (weekday !== 0 || weekday !== 6) {
       months.push(month[today.getMonth()]);
       days.push(day);
       weekdays.push(week[weekday]);
       $(cont).append(
         '<a href="#" class="dateChoose"><span class="h4">' +
-          week[weekday] +
-          '</span><div class="btn btn__circle"><span class="h1">' +
-          day +
-          "</span></div></a>"
+				week[weekday] +
+				'</span><div class="btn btn__circle"><span class="h1">' +
+				day +
+				"</span></div></a>"
       );
     }
   }
@@ -336,16 +337,15 @@ function aboveTheFold() {
   var $h = $above.height();
   var $hh = 0;
 
-  $above
-    .find("section")
-    .each(function () {
-      $hh = $hh + $(this).outerHeight(true);
-    });
+  $above.find("section").each(function () {
+    $hh = $hh + $(this).outerHeight(true);
+  });
   $above.find("picture, img").css({ height: $h - $hh });
 }
 
 jQuery(document).ready(function () {
   lazyImages();
+	aboveTheFold();
   menuOpen();
   uglyInput();
   if ($("#dateContainer1a")) {
@@ -387,9 +387,9 @@ jQuery(document).ready(function () {
 
 jQuery(window).on("load", function () {
   lazyImages();
-	aboveTheFold();
+  aboveTheFold();
 });
 
 jQuery(window).on("resize", function () {
-	aboveTheFold();
+  aboveTheFold();
 });

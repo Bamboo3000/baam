@@ -1086,6 +1086,11 @@ i {
 	max-height: calc(100vh - 180px);
 }
 
+.above-the-fold:empty {
+	display: none !important;
+	visibility: hidden !important;
+}
+
 .navigation {
 	position: relative;
 	z-index: 999;
