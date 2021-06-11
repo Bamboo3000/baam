@@ -37,7 +37,7 @@ video {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-	position: relative;
+  position: relative;
 }
 
 object,
@@ -202,35 +202,41 @@ i {
 .card-reveal {
   text-align: center;
   @include trans(300ms);
+  z-index: 9;
+  position: relative;
 
   & + div {
     @include trans(300ms);
+    position: relative;
+  }
+
+  > div {
+    @include trans(300ms);
+    z-index: 9;
+    position: relative;
+  }
+
+  .card-body {
+    overflow: hidden;
+    @include trans(300ms);
+    z-index: 9;
+    position: relative;
+    padding-left: 79px !important;
+
+    &-title {
+      @include trans(300ms);
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .card-hover-content {
     display: none;
+    margin-left: -100%;
+    margin-right: 100%;
     opacity: 0;
   }
-
-  * {
-    position: relative;
-    z-index: 9;
-    @include trans(300ms);
-  }
-
-  // &:after {
-  // 	position: absolute;
-  // 	content: '';
-  // 	z-index: 1;
-  // 	top: 0;
-  // 	right: 40%;
-  // 	bottom: 0;
-  // 	height: 100%;
-  // 	width: 0;
-  // 	border-radius: 9999px;
-  // 	background-color: $color-grey7;
-  // 	@include trans(300ms);
-  // }
 
   &:hover {
     flex: 0 0 calc(41.666667% + 300px) !important;
@@ -246,13 +252,19 @@ i {
     }
 
     .card-body {
-      text-align: left !important;
-      justify-content: flex-start !important;
+      //text-align: left !important;
+      //justify-content: flex-start !important;
+      padding-right: 300px !important;
+
+      &-title {
+        //transform: translateX(200%);
+        margin-left: 0;
+      }
     }
 
     .card-hover-content {
-      display: block;
-      opacity: 1;
+      // transform: scaleY(1);
+      // opacity: 1;
     }
 
     // &:after {
@@ -262,68 +274,69 @@ i {
   }
 }
 
-.above-the-fold {
-  max-height: calc(100vh - 180px);
-	min-height: 500px;
-	height: auto;
+// .above-the-fold {
+//   max-height: calc(100vh - 180px);
+// 	min-height: 500px;
+// 	height: auto;
 
-	&:empty {
-		display: none!important;
-		visibility: hidden!important;
-	}
+// 	&:empty {
+// 		display: none!important;
+// 		visibility: hidden!important;
+// 	}
 
-	// header.header {
+// 	// header.header {
 
-	// 	picture, img {
-	// 		//position: relative;
-	// 		height: 50%;
-	// 	}
+// 	// 	picture, img {
+// 	// 		//position: relative;
+// 	// 		height: 50%;
+// 	// 	}
 
-	// }
+// 	// }
 
-}
+// }
+
 #sb_instagram {
-	#sbi_load {
-		display: flex;
-		align-items: center;
-		justify-content: stretch;
-		@media(max-width: 1799px) {
-			flex-wrap: wrap;
-		}
-		.sbi_load_btn {
-			width: 50%;
-			@extend .btn;
-			@extend .btn__medium;
-			@extend .btn__outline;
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-			background: transparent!important;
-			margin-left: 4px;
-			@media(max-width: 1799px) {
-				width: 100%;
-				margin-right: 4px;
-			}
-		}
-		.sbi_follow_btn {
-			width: 50%;
-			margin-right: 4px;
-			@media(max-width: 1799px) {
-				margin-left: 4px;
-				width: 100%;
-			}
-		}
-		.sbi_follow_btn a {
-			@extend .btn;
-			@extend .btn.black;
-			@extend .btn__medium;
-			border: 1px solid black;
-			width: 100%;
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-			background: black!important;
-			color: white!important;
-		}
-	}
+  #sbi_load {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    @media (max-width: 1799px) {
+      flex-wrap: wrap;
+    }
+    .sbi_load_btn {
+      width: 50%;
+      @extend .btn;
+      @extend .btn__medium;
+      @extend .btn__outline;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      background: transparent !important;
+      margin-left: 4px;
+      @media (max-width: 1799px) {
+        width: 100%;
+        margin-right: 4px;
+      }
+    }
+    .sbi_follow_btn {
+      width: 50%;
+      margin-right: 4px;
+      @media (max-width: 1799px) {
+        margin-left: 4px;
+        width: 100%;
+      }
+    }
+    .sbi_follow_btn a {
+      @extend .btn;
+      @extend .btn.black;
+      @extend .btn__medium;
+      border: 1px solid black;
+      width: 100%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      background: black !important;
+      color: white !important;
+    }
+  }
 }
 
 // .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {

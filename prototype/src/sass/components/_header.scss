@@ -1,4 +1,9 @@
 .header {
     padding: 0 50px;
     position: relative;
+
+		picture, img {
+			max-height: 60vh;
+		}
+
 }

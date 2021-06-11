@@ -137,10 +137,10 @@ function getLastDays(cont) {
       weekdays.push(week[weekday]);
       $(cont).append(
         '<a href="#" class="dateChoose"><span class="h4">' +
-				week[weekday] +
-				'</span><div class="btn btn__circle"><span class="h1">' +
-				day +
-				"</span></div></a>"
+          week[weekday] +
+          '</span><div class="btn btn__circle"><span class="h1">' +
+          day +
+          "</span></div></a>"
       );
     }
   }
@@ -210,10 +210,39 @@ function aboveTheFold() {
   $above.find("picture, img").css({ height: $h - $hh });
 }
 
+function hoverReveal() {
+  var $card = $(".card-reveal");
+  var $hover = $(".card-hover-content");
+
+  $card.on("mouseenter", function () {
+    $hover.stop(true, true).animate(
+      {
+        marginLeft: "0",
+        marginRight: "0",
+        opacity: 1,
+        height: "toggle",
+      },
+      300
+    );
+  });
+  $card.on("mouseleave", function () {
+    $hover.stop(true, true).animate(
+      {
+        marginLeft: "-100%",
+        marginRight: "100%",
+        opacity: 0,
+        height: "toggle",
+      },
+      300
+    );
+  });
+}
+
 jQuery(document).ready(function () {
   lazyImages();
   menuOpen();
   uglyInput();
+  hoverReveal();
   if ($("#dateContainer1a")) {
     getLastDays("#dateContainer1a");
   }
@@ -253,9 +282,9 @@ jQuery(document).ready(function () {
 
 jQuery(window).on("load", function () {
   lazyImages();
-  aboveTheFold();
+  //aboveTheFold();
 });
 
 jQuery(window).on("resize", function () {
-  aboveTheFold();
+  //aboveTheFold();
 });

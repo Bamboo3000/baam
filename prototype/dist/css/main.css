@@ -1094,23 +1094,43 @@ i {
 }
 
 .card-reveal {
+	position: relative;
+	z-index: 9;
 	transition: all 300ms ease-out;
 	text-align: center;
 }
 
 .card-reveal + div {
+	position: relative;
+	transition: all 300ms ease-out;
+}
+
+.card-reveal > div {
+	position: relative;
+	z-index: 9;
+	transition: all 300ms ease-out;
+}
+
+.card-reveal .card-body {
+	position: relative;
+	z-index: 9;
+	overflow: hidden;
+	padding-left: 79px !important;
+	transition: all 300ms ease-out;
+}
+
+.card-reveal .card-body-title {
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
 	transition: all 300ms ease-out;
 }
 
 .card-reveal .card-hover-content {
 	display: none;
+	margin-right: 100%;
+	margin-left: -100%;
 	opacity: 0;
-}
-
-.card-reveal * {
-	position: relative;
-	z-index: 9;
-	transition: all 300ms ease-out;
 }
 
 .card-reveal:hover {
@@ -1128,24 +1148,11 @@ i {
 }
 
 .card-reveal:hover .card-body {
-	text-align: left !important;
-	justify-content: flex-start !important;
+	padding-right: 300px !important;
 }
 
-.card-reveal:hover .card-hover-content {
-	display: block;
-	opacity: 1;
-}
-
-.above-the-fold {
-	height: auto;
-	min-height: 500px;
-	max-height: calc(100vh - 180px);
-}
-
-.above-the-fold:empty {
-	display: none !important;
-	visibility: hidden !important;
+.card-reveal:hover .card-body-title {
+	margin-left: 0;
 }
 
 #sb_instagram #sbi_load {
@@ -1306,6 +1313,11 @@ i {
 .header {
 	position: relative;
 	padding: 0 50px;
+}
+
+.header picture,
+.header img {
+	max-height: 60vh;
 }
 
 .slider .swiper-slide {

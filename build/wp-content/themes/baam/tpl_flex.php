@@ -48,13 +48,15 @@ get_header(); ?>
 			<?php get_template_part('flexparts/slider'); ?>
 		<?php elseif (get_row_layout() == 'card_with_columns' && get_sub_field('columns')) : ?>
 			<?php get_template_part('flexparts/card-columns'); ?>
+		<?php elseif (get_row_layout() == 'hover_effect_section' && get_sub_field('image')) : ?>
+			<?php get_template_part('flexparts/hover-section'); ?>
 		<?php elseif (get_row_layout() == 'small_cta_section' && get_sub_field('link')) : ?>
 			<?php get_template_part('flexparts/small-cta'); ?>
 		<?php elseif (get_row_layout() == 'two_columns_cta' && get_sub_field('link')) : ?>
 			<?php get_template_part('flexparts/columns-cta'); ?>
 		<?php elseif (get_row_layout() == 'contact_form' && get_sub_field('contact_form')) : ?>
 			<?php get_template_part('flexparts/contact-form'); ?>
-		<?php elseif (get_row_layout() == 'careers' && get_sub_field('contact_form')): ?>
+		<?php elseif (get_row_layout() == 'careers' && get_sub_field('contact_form')) : ?>
 			<?php get_template_part('flexparts/careers'); ?>
 		<?php endif; ?>
 	<?php endwhile; ?>

@@ -10,7 +10,7 @@
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.8');
+	define('_S_VERSION', '1.0.9');
 }
 
 if (!function_exists('baam_setup')) :
@@ -140,10 +140,10 @@ function baam_widgets_init()
 }
 add_action('widgets_init', 'baam_widgets_init');
 
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' );
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
 
 /**
  * Enqueue scripts and styles.
@@ -210,5 +210,5 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-show_admin_bar( false );
-require_once( get_template_directory() . '/inc/acf_block_functions.php' );
+show_admin_bar(false);
+require_once(get_template_directory() . '/inc/acf_block_functions.php');
