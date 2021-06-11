@@ -22,7 +22,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="col-lg-7 pr-0 hover-effect-section">
-				<div class="h-100 card border-0 border-radius bg-grey2 p-0 overflow-hidden">
+				<div class="h-100 card border-0 border-radius bg-grey2 p-0 overflow-hidden" style="color: yellow;">
 					<img data-src="<?php echo get_sub_field('image')['url']; ?>" alt="<?php echo get_sub_field('image')['url']; ?>" class="lazy bg-cover scale">
 				</div>
 			</div>

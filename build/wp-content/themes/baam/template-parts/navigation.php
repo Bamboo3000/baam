@@ -21,7 +21,8 @@
 		</div>
 	</div>
 </nav>
-<div class="collapse w-100 <?php echo get_field('push_navigation'); ?>" id="navCollapse">
+<div class="collapse w-100 <?php //echo get_field('push_navigation'); 
+														?>" id="navCollapse">
 	<div class="container-fluid p-0">
 		<div class="row">
 			<div class="col-12">

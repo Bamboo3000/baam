@@ -282,9 +282,9 @@ jQuery(document).ready(function () {
 
 jQuery(window).on("load", function () {
   lazyImages();
-  //aboveTheFold();
+  aboveTheFold();
 });
 
 jQuery(window).on("resize", function () {
-  //aboveTheFold();
+  aboveTheFold();
 });

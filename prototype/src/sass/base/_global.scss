@@ -212,6 +212,13 @@ i {
   & + div {
     @include trans(300ms);
     position: relative;
+
+    .card {
+      img {
+        @include trans(300ms);
+        position: relative;
+      }
+    }
   }
 
   > div {
@@ -248,6 +255,12 @@ i {
 
     & + div {
       margin-left: -300px;
+
+      .card {
+        img {
+          transform: translateX(300px);
+        }
+      }
     }
 
     .card {
@@ -278,26 +291,25 @@ i {
   }
 }
 
-// .above-the-fold {
-//   max-height: calc(100vh - 180px);
-// 	min-height: 500px;
-// 	height: auto;
+.above-the-fold {
+  max-height: calc(100vh - 140px);
+  min-height: 500px;
+  height: auto;
 
-// 	&:empty {
-// 		display: none!important;
-// 		visibility: hidden!important;
-// 	}
+  &:empty {
+    display: none !important;
+    visibility: hidden !important;
+  }
 
-// 	// header.header {
+  // header.header {
 
-// 	// 	picture, img {
-// 	// 		//position: relative;
-// 	// 		height: 50%;
-// 	// 	}
+  // 	picture, img {
+  // 		//position: relative;
+  // 		height: 50%;
+  // 	}
 
-// 	// }
-
-// }
+  // }
+}
 
 #sb_instagram {
   #sbi_load {
