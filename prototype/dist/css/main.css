@@ -1093,6 +1093,10 @@ i {
 	color: #383a3e;
 }
 
+.hover-effect-section {
+	max-height: 500px;
+}
+
 .card-reveal {
 	position: relative;
 	z-index: 9;

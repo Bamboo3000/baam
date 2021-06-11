@@ -199,6 +199,10 @@ i {
   }
 }
 
+.hover-effect-section {
+  max-height: 500px;
+}
+
 .card-reveal {
   text-align: center;
   @include trans(300ms);
