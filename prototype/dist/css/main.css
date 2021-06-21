@@ -911,6 +911,12 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	padding: 0;
+	transition: opacity 1500ms ease-in-out;
+	opacity: 0;
+}
+
+body.loaded {
+	opacity: 1;
 }
 
 * {
@@ -3143,11 +3149,19 @@ h2,
 
 .navigation .btn__menu {
 	width: 42px;
-	height: 27px;
 }
 
 .navigation .btn__menu span {
 	height: 3px;
+}
+
+.navigation .btn__menu span:nth-child(2),
+.navigation .btn__menu span:nth-child(3) {
+	top: 12px;
+}
+
+.navigation .btn__menu span:nth-child(4) {
+	top: 24px;
 }
 
 #navCollapse {
@@ -3203,9 +3217,36 @@ h1,
 	font-size: 1.875rem;
 }
 
+.padding {
+	padding-right: 16px !important;
+	padding-left: 16px !important;
+}
+
+.margin {
+	margin-right: 16px !important;
+	margin-left: 16px !important;
+}
+
+.navigation {
+	padding: 32px 16px;
+}
+
 .navigation .logo img,
 .navigation .logo svg {
 	max-width: 114px;
+}
+
+.navigation .btn__menu {
+	width: 36px;
+}
+
+.navigation .btn__menu span:nth-child(2),
+.navigation .btn__menu span:nth-child(3) {
+	top: 11px;
+}
+
+.navigation .btn__menu span:nth-child(4) {
+	top: 22px;
 }
 
 #navCollapse {

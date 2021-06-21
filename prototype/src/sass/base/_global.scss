@@ -17,6 +17,12 @@ body {
   position: relative;
   display: block;
   min-height: 100vh;
+  opacity: 0;
+  transition: opacity 1500ms ease-in-out;
+
+  &.loaded {
+    opacity: 1;
+  }
 }
 
 * {
@@ -175,6 +181,11 @@ i {
     padding-left: 32px !important;
     padding-right: 32px !important;
   }
+
+  @media (max-width: 575px) {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
 
 .margin {
@@ -184,6 +195,11 @@ i {
   @media (max-width: 991px) {
     margin-left: 32px !important;
     margin-right: 32px !important;
+  }
+
+  @media (max-width: 575px) {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
   }
 }
 

@@ -17,6 +17,18 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementsByTagName('body')[0].classList.add("loaded");
+		};
+		window.onbeforeunload = function(e) {
+			// e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+			// // Chrome requires returnValue to be set
+			// e.returnValue = '';
+			document.getElementsByTagName('body')[0].classList.remove("loaded");
+		};
+		// The order matters here, and this may report false positives for unlisted browsers.
+	</script>
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<?php wp_head(); ?>
