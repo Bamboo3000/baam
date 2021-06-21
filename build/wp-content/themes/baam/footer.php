@@ -16,7 +16,7 @@
 	<div class="container-fluid padding">
 		<div class="card border-0 border-radius-s copy-card horizontal bg-grey2 pb-5 px-2">
 			<div class="row align-items-center">
-				<div class="col-lg-5 d-flex align-items-center justify-content-start">
+				<div class="col-md-5 d-flex align-items-center justify-content-start">
 					<a class="flex-grow-0 btn btn__high small text-left" data-toggle="collapse" href="#footerCollapse" role="button" aria-expanded="false" aria-controls="footerCollapse">
 						BAAM
 					</a>
@@ -27,12 +27,12 @@
 						01223 20 30 90
 					</a>
 				</div>
-				<div class="col-lg-2 py-3 text-center">
+				<div class="col-md-2 py-3 px-0 text-center">
 					<a href="/contact-us" class="btn btn__high">
 						Contact
 					</a>
 				</div>
-				<div class="col-lg-5 d-flex align-items-center justify-content-end">
+				<div class="col-md-5 d-flex align-items-center justify-content-end">
 					<a href="/privacy-policy" class="flex-grow-0 m-0 btn btn__high small">
 						Privacy
 					</a>

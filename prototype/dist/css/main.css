@@ -1291,49 +1291,6 @@ i {
 	padding: 1.5rem 0;
 }
 
-.breadcrumbs {
-	line-height: 1;
-	margin: 0;
-	padding: 10px 0;
-}
-
-.breadcrumbs__list {
-	max-width: calc(100vw - 70px) !important;
-}
-
-.breadcrumbs__items {
-	position: relative;
-	display: flex;
-	margin: 0;
-	margin-left: -19px;
-	padding: 0;
-	list-style: none;
-	white-space: normal;
-	flex-wrap: wrap;
-}
-
-.breadcrumbs__items a,
-.breadcrumbs__items i,
-.breadcrumbs__items strong {
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 1;
-	display: inline-block;
-	padding: 0 4px;
-	vertical-align: middle;
-	white-space: normal;
-}
-
-.breadcrumbs__items a:hover,
-.breadcrumbs__items i:hover,
-.breadcrumbs__items strong:hover {
-	color: inherit;
-}
-
-.breadcrumbs__items strong {
-	font-weight: 700;
-}
-
 .header {
 	position: relative;
 	padding: 0 50px;
@@ -1348,7 +1305,7 @@ i {
 	position: relative;
 	overflow: hidden;
 	max-width: 40vw;
-	padding-top: 22.4vw;
+	padding-top: 22.5vw;
 	background-color: black;
 }
 
@@ -3111,12 +3068,34 @@ h1,
 	font-size: 1.875rem;
 }
 
-#navCollapse {
-	margin-top: -32px;
-}
-
 #navCollapse ul li {
 	font-size: 2.5rem;
+}
+
+}
+
+@media (max-width: 1199px) {
+
+.card-reveal:hover {
+	max-width: calc(50% + 250px) !important;
+	flex: 0 0 calc(50% + 250px) !important;
+}
+
+.card-reveal:hover + div {
+	margin-left: -250px;
+}
+
+.card-reveal:hover + div .card img {
+	transform: translateX(250px);
+}
+
+.card-reveal:hover .card {
+	border-top-right-radius: 250px !important;
+	border-bottom-right-radius: 250px !important;
+}
+
+.card-reveal:hover .card-body {
+	padding-right: 250px !important;
 }
 
 }
@@ -3139,17 +3118,49 @@ h2,
 	font-size: 1.25rem;
 }
 
+.padding {
+	padding-right: 32px !important;
+	padding-left: 32px !important;
+}
+
+.margin {
+	margin-right: 32px !important;
+	margin-left: 32px !important;
+}
+
+.above-the-fold {
+	max-height: calc(100vh - 120px);
+}
+
 .navigation {
-	padding-right: 48px;
-	padding-left: 48px;
+	padding: 48px 32px;
+}
+
+.navigation .logo img,
+.navigation .logo svg {
+	max-width: 128px;
+}
+
+.navigation .btn__menu {
+	width: 42px;
+	height: 27px;
+}
+
+.navigation .btn__menu span {
+	height: 3px;
 }
 
 #navCollapse {
-	padding: 0 48px;
+	padding: 0 32px;
 }
 
 #navCollapse ul li {
 	font-size: 2.1875rem;
+}
+
+.slider .swiper-slide {
+	max-width: 60vw;
+	padding-top: 33.75vw;
 }
 
 .article {
@@ -3195,6 +3206,10 @@ h1,
 .navigation .logo img,
 .navigation .logo svg {
 	max-width: 114px;
+}
+
+#navCollapse {
+	padding: 0 16px;
 }
 
 #navCollapse {

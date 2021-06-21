@@ -1,4 +1,4 @@
-<section class="slider pb-4">
+<section class="slider pb-4 <?php echo get_sub_field('center_slider') ? 'slider__center' : null; ?>">
 	<div class="swiper-container px-2 pb-3">
 		<div class="swiper-wrapper">
 			<?php foreach (get_sub_field('slides') as $slide) : ?>

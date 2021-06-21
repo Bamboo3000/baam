@@ -1,12 +1,12 @@
 <section class="cta-biggest mb-4 position-relative">
 	<?php if (get_sub_field('image')) : ?>
 		<div class="position-absolute left-auto right-auto h-100 overflow-hidden border-radius margin">
-			<img data-src="<?php echo get_sub_field('image')['url']; ?>" alt="<?php echo get_sub_field('image')['title']; ?>" class="lazy bg-cover scale">
+			<img data-src="<?php echo get_sub_field('image')['url']; ?>" alt="<?php echo get_sub_field('image')['title']; ?>" class="lazy bg-cover scale w-100 h-100">
 		</div>
 	<?php endif; ?>
 	<div class="container-fluid py-5">
 		<div class="row align-items-center justify-content-center py-5">
-			<div class="col-lg-6 text-center py-5">
+			<div class="col-lg-6 col-md-8 col-sm-10 text-center py-5">
 				<?php if (get_sub_field('title')) : ?>
 					<h1 class="py-5 font-secondary">
 						<?php echo get_sub_field('title'); ?>

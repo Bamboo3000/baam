@@ -131,6 +131,125 @@ function urlParser($url)
 headTemplate:'<thead><tr><th colspan="7" class="datepicker-title"></th></tr><tr><th class="prev">'+o.templates.leftArrow+'</th><th colspan="5" class="datepicker-switch"></th><th class="next">'+o.templates.rightArrow+"</th></tr></thead>",contTemplate:'<tbody><tr><td colspan="7"></td></tr></tbody>',footTemplate:'<tfoot><tr><th colspan="7" class="today"></th></tr><tr><th colspan="7" class="clear"></th></tr></tfoot>'};r.template='<div class="datepicker"><div class="datepicker-days"><table class="table-condensed">'+r.headTemplate+"<tbody></tbody>"+r.footTemplate+'</table></div><div class="datepicker-months"><table class="table-condensed">'+r.headTemplate+r.contTemplate+r.footTemplate+'</table></div><div class="datepicker-years"><table class="table-condensed">'+r.headTemplate+r.contTemplate+r.footTemplate+'</table></div><div class="datepicker-decades"><table class="table-condensed">'+r.headTemplate+r.contTemplate+r.footTemplate+'</table></div><div class="datepicker-centuries"><table class="table-condensed">'+r.headTemplate+r.contTemplate+r.footTemplate+"</table></div></div>",a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.datepicker=m,this},a.fn.datepicker.version="1.9.0",a.fn.datepicker.deprecated=function(a){var b=window.console;b&&b.warn&&b.warn("DEPRECATED: "+a)},a(document).on("focus.datepicker.data-api click.datepicker.data-api",'[data-provide="datepicker"]',function(b){var c=a(this);c.data("datepicker")||(b.preventDefault(),n.call(c,"show"))}),a(function(){n.call(a('[data-provide="datepicker-inline"]'))})});
 !function(t){var i=t(window);t.fn.visible=function(t,e,o){if(!(this.length<1)){var r=this.length>1?this.eq(0):this,n=r.get(0),f=i.width(),h=i.height(),o=o?o:"both",l=e===!0?n.offsetWidth*n.offsetHeight:!0;if("function"==typeof n.getBoundingClientRect){var g=n.getBoundingClientRect(),u=g.top>=0&&g.top<h,s=g.bottom>0&&g.bottom<=h,c=g.left>=0&&g.left<f,a=g.right>0&&g.right<=f,v=t?u||s:u&&s,b=t?c||a:c&&a;if("both"===o)return l&&v&&b;if("vertical"===o)return l&&v;if("horizontal"===o)return l&&b}else{var d=i.scrollTop(),p=d+h,w=i.scrollLeft(),m=w+f,y=r.offset(),z=y.top,B=z+r.height(),C=y.left,R=C+r.width(),j=t===!0?B:z,q=t===!0?z:B,H=t===!0?R:C,L=t===!0?C:R;if("both"===o)return!!l&&p>=q&&j>=d&&m>=L&&H>=w;if("vertical"===o)return!!l&&p>=q&&j>=d;if("horizontal"===o)return!!l&&m>=L&&H>=w}}}}(jQuery);
 
+$.scrollLock = (function scrollLockClosure() {
+  "use strict";
+
+  var $html = $("html"),
+    // State: unlocked by default
+    locked = false,
+    // State: scroll to revert to
+    prevScroll = {
+      scrollLeft: $(window).scrollLeft(),
+      scrollTop: $(window).scrollTop(),
+    },
+    // State: styles to revert to
+    prevStyles = {},
+    lockStyles = {
+      "overflow-y": "scroll",
+      position: "fixed",
+      width: "100%",
+    };
+
+  // Instantiate cache in case someone tries to unlock before locking
+  saveStyles();
+
+  // Save context's inline styles in cache
+  function saveStyles() {
+    var styleAttr = $html.attr("style"),
+      styleStrs = [],
+      styleHash = {};
+
+    if (!styleAttr) {
+      return;
+    }
+
+    styleStrs = styleAttr.split(/;\s/);
+
+    $.each(styleStrs, function serializeStyleProp(styleString) {
+      if (!styleString) {
+        return;
+      }
+
+      var keyValue = styleString.split(/\s:\s/);
+
+      if (keyValue.length < 2) {
+        return;
+      }
+
+      styleHash[keyValue[0]] = keyValue[1];
+    });
+
+    $.extend(prevStyles, styleHash);
+  }
+
+  function lock() {
+    var appliedLock = {};
+
+    // Duplicate execution will break DOM statefulness
+    if (locked) {
+      return;
+    }
+
+    // Save scroll state...
+    prevScroll = {
+      scrollLeft: $(window).scrollLeft(),
+      scrollTop: $(window).scrollTop(),
+    };
+
+    // ...and styles
+    saveStyles();
+
+    // Compose our applied CSS
+    $.extend(appliedLock, lockStyles, {
+      // And apply scroll state as styles
+      left: -prevScroll.scrollLeft + "px",
+      top: -prevScroll.scrollTop + "px",
+    });
+
+    // Then lock styles...
+    $html.css(appliedLock);
+
+    // ...and scroll state
+    $(window).scrollLeft(0).scrollTop(0);
+
+    locked = true;
+  }
+
+  function unlock() {
+    // Duplicate execution will break DOM statefulness
+    if (!locked) {
+      return;
+    }
+
+    // Revert styles
+    $html.attr("style", $("<x>").css(prevStyles).attr("style") || "");
+
+    // Revert scroll values
+    $(window).scrollLeft(prevScroll.scrollLeft).scrollTop(prevScroll.scrollTop);
+
+    locked = false;
+  }
+
+  return function scrollLock(on) {
+    // If an argument is passed, lock or unlock depending on truthiness
+    if (arguments.length) {
+      if (on) {
+        lock();
+      } else {
+        unlock();
+      }
+    }
+    // Otherwise, toggle
+    else {
+      if (locked) {
+        unlock();
+      } else {
+        lock();
+      }
+    }
+  };
+})();
+
 "use strict";
 
 function lazyImages() {
@@ -332,6 +451,22 @@ function videoPlay() {
   });
 }
 
+// function sliderCenter() {
+//   if ($(".slider__center").length > 0) {
+//     var $sliderH = $(".slider__center").height();
+//     var $sliderT = $(".slider__center").offset().top + $sliderH / 2;
+//     var $bodyH = $(window).height();
+//     var $sliderS = Math.round($sliderT - $bodyH / 2);
+//     var $scroll = $(window).scrollTop();
+//     //console.log($scroll, $sliderS);
+//     if ($scroll >= $sliderS && !swiper.isEnd) {
+//       $.scrollLock(true);
+//       $(".swiper-wrapper").focus();
+//       console.log($sliderS, swiper.isEnd);
+//     }
+//   }
+// }
+
 function aboveTheFold() {
   var $above = $(".above-the-fold");
   var $h = $above.height();
@@ -370,12 +505,13 @@ function hoverReveal() {
     );
   });
 }
-
+var swiper;
 jQuery(document).ready(function () {
   lazyImages();
   menuOpen();
   uglyInput();
   hoverReveal();
+  //sliderCenter();
   if ($("#dateContainer1a")) {
     getLastDays("#dateContainer1a");
   }
@@ -386,7 +522,7 @@ jQuery(document).ready(function () {
     getLastDays("#dateContainer1c");
   }
   careersCard();
-  var swiper = new Swiper(".swiper-container", {
+  swiper = new Swiper(".swiper-container", {
     direction: "horizontal",
     slidesPerView: "auto",
     freeMode: true,
@@ -420,4 +556,15 @@ jQuery(window).on("load", function () {
 
 jQuery(window).on("resize", function () {
   aboveTheFold();
+  // sliderCenter();
+  // if (swiper.isEnd) {
+  //   $.scrollLock(false);
+  // }
 });
+
+// jQuery(window).on("scroll", function () {
+//   sliderCenter();
+//   if (swiper.isEnd) {
+//     $.scrollLock(false);
+//   }
+// });

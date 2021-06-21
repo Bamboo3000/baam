@@ -199,6 +199,22 @@ function videoPlay() {
   });
 }
 
+// function sliderCenter() {
+//   if ($(".slider__center").length > 0) {
+//     var $sliderH = $(".slider__center").height();
+//     var $sliderT = $(".slider__center").offset().top + $sliderH / 2;
+//     var $bodyH = $(window).height();
+//     var $sliderS = Math.round($sliderT - $bodyH / 2);
+//     var $scroll = $(window).scrollTop();
+//     //console.log($scroll, $sliderS);
+//     if ($scroll >= $sliderS && !swiper.isEnd) {
+//       $.scrollLock(true);
+//       $(".swiper-wrapper").focus();
+//       console.log($sliderS, swiper.isEnd);
+//     }
+//   }
+// }
+
 function aboveTheFold() {
   var $above = $(".above-the-fold");
   var $h = $above.height();
@@ -237,12 +253,13 @@ function hoverReveal() {
     );
   });
 }
-
+var swiper;
 jQuery(document).ready(function () {
   lazyImages();
   menuOpen();
   uglyInput();
   hoverReveal();
+  //sliderCenter();
   if ($("#dateContainer1a")) {
     getLastDays("#dateContainer1a");
   }
@@ -253,7 +270,7 @@ jQuery(document).ready(function () {
     getLastDays("#dateContainer1c");
   }
   careersCard();
-  var swiper = new Swiper(".swiper-container", {
+  swiper = new Swiper(".swiper-container", {
     direction: "horizontal",
     slidesPerView: "auto",
     freeMode: true,
@@ -287,4 +304,15 @@ jQuery(window).on("load", function () {
 
 jQuery(window).on("resize", function () {
   aboveTheFold();
+  // sliderCenter();
+  // if (swiper.isEnd) {
+  //   $.scrollLock(false);
+  // }
 });
+
+// jQuery(window).on("scroll", function () {
+//   sliderCenter();
+//   if (swiper.isEnd) {
+//     $.scrollLock(false);
+//   }
+// });

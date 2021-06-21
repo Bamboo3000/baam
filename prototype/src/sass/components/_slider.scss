@@ -2,9 +2,14 @@
   .swiper-slide {
     max-width: 40vw;
     position: relative;
-    padding-top: 22.4vw;
+    padding-top: 22.5vw;
     overflow: hidden;
     background-color: black;
+
+    @media (max-width: 991px) {
+      max-width: 60vw;
+      padding-top: 33.75vw;
+    }
 
     img,
     video,

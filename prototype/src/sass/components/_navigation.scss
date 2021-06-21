@@ -1,133 +1,136 @@
 .navigation {
+  position: relative;
+  z-index: 999;
+  padding: 64px;
+
+  @media (max-width: 991px) {
+    padding: 48px 32px;
+  }
+
+  .logo {
     position: relative;
-    z-index: 999;
-    padding: 64px;
 
-    @media(max-width: 991px) {
-        padding-left: 48px;
-        padding-right: 48px;
+    img,
+    svg {
+      max-width: 152px;
+
+      @media (max-width: 991px) {
+        max-width: 128px;
+      }
+
+      @media (max-width: 575px) {
+        max-width: 114px;
+      }
+    }
+  }
+
+  .btn__menu {
+    appearance: none;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    background: transparent;
+    width: 50px;
+    height: 30px;
+    transform: rotate(0deg);
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+
+    @media (max-width: 991px) {
+      width: 42px;
+      height: 27px;
     }
 
-    .logo {
-        position: relative;
+    span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: black;
+      border-radius: 10px !important;
+      overflow: hidden;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: all 250ms ease-in-out;
 
-        img,
-        svg {
-            max-width: 152px;
+      @media (max-width: 991px) {
+        height: 3px;
+      }
 
-            @media(max-width: 575px) {
-                max-width: 114px;
-            }
+      &:nth-child(1) {
+        top: 0px;
+      }
 
-        }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 13px;
+      }
 
+      &:nth-child(4) {
+        top: 26px;
+      }
     }
 
-    .btn__menu {
-        appearance: none;
-        outline: 0;
-        border: none;
-        box-shadow: none;
-        position: relative;
-        background: transparent;
-        width: 50px;
-        height: 30px;
-        transform: rotate(0deg);
-        transition: all 250ms ease-in-out;
-        cursor: pointer;
-
-        span {
-            display: block;
-            position: absolute;
-            height: 4px;
-            width: 100%;
-            background: black;
-            border-radius: 10px!important;
-            overflow: hidden;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: all 250ms ease-in-out;
-
-            &:nth-child(1) {
-                top: 0px;
-            }
-
-            &:nth-child(2),
-            &:nth-child(3) {
-                top: 13px;
-            }
-
-            &:nth-child(4) {
-                top: 26px;
-            }
-
+    &.active {
+      span {
+        &:nth-child(1),
+        &:nth-child(4) {
+          top: 13px;
+          width: 0%;
+          left: 50%;
         }
 
-        &.active {
-
-            span {
-
-                &:nth-child(1),
-                &:nth-child(4) {
-                    top: 13px;
-                    width: 0%;
-                    left: 50%;
-                }
-
-                &:nth-child(2) {
-                    transform: rotate(45deg);
-                }
-
-                &:nth-child(3) {
-                    transform: rotate(-45deg);
-                }
-
-            }
-
+        &:nth-child(2) {
+          transform: rotate(45deg);
         }
 
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
     }
-
+  }
 }
 
 #navCollapse {
-    padding: 0 64px;
-    z-index: 999;
+  padding: 0 64px;
+  z-index: 999;
 
-    @media(max-width: 1440px) {
-        margin-top: -32px;
-    }
+  @media (max-width: 1440px) {
+    //margin-top: -32px;
+  }
 
-    @media(max-width: 991px) {
-        padding: 0 48px;
-    }
+  @media (max-width: 991px) {
+    padding: 0 32px;
+  }
 
-    @media(max-width: 575px) {
+  @media (max-width: 575px) {
+    padding: 0 16px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 1.875rem;
+  }
+
+  ul {
+    li {
+      padding: 1.5rem 0;
+      font-size: 3.125rem;
+      line-height: 1;
+
+      @media (max-width: 1440px) {
+        font-size: 2.5rem;
+      }
+
+      @media (max-width: 991px) {
+        font-size: 2.1875rem;
+      }
+
+      @media (max-width: 575px) {
         font-size: 1.875rem;
+      }
     }
-
-    ul {
-
-        li {
-            padding: 1.5rem 0;
-            font-size: 3.125rem;
-            line-height: 1;
-
-            @media(max-width: 1440px) {
-                font-size: 2.5rem;
-            }
-        
-            @media(max-width: 991px) {
-                font-size: 2.1875rem;
-            }
-        
-            @media(max-width: 575px) {
-                font-size: 1.875rem;
-            }
-
-        }
-
-    }
-
+  }
 }
