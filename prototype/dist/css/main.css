@@ -1312,6 +1312,7 @@ i {
 	overflow: hidden;
 	max-width: 40vw;
 	padding-top: 22.5vw;
+	border-radius: 10px !important;
 	background-color: black;
 }
 
@@ -1321,6 +1322,7 @@ i {
 	position: absolute;
 	top: 0;
 	transition: all 300ms ease-out;
+	border-radius: 10px !important;
 }
 
 .slider .swiper-slide .btn,
