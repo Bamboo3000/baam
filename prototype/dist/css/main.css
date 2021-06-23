@@ -3077,12 +3077,30 @@ h1,
 }
 
 #navCollapse ul li {
-	font-size: 2.5rem;
+	font-size: 2.25rem;
+	padding: 1.3rem 0;
 }
 
 }
 
 @media (max-width: 1199px) {
+
+.btn__big {
+	font-size: 1.5rem;
+	padding: .8rem 1.5rem;
+}
+
+.btn__medium,
+#sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a {
+	font-size: 1.1rem;
+	padding: 1rem 2.4rem;
+}
+
+.btn__default {
+	font-size: 1.15rem;
+	padding: .8rem 3rem;
+}
 
 .card-reveal:hover {
 	max-width: calc(50% + 250px) !important;
@@ -3097,11 +3115,6 @@ h1,
 	transform: translateX(250px);
 }
 
-.card-reveal:hover .card {
-	border-top-right-radius: 250px !important;
-	border-bottom-right-radius: 250px !important;
-}
-
 .card-reveal:hover .card-body {
 	padding-right: 250px !important;
 }
@@ -3109,6 +3122,15 @@ h1,
 }
 
 @media (max-width: 991px) {
+
+.border-radius {
+	border-radius: 12px !important;
+}
+
+.border-radius-s,
+.contact-section .form-control-lg {
+	border-radius: 7px !important;
+}
 
 .text-size-xxxxlarge {
 	font-size: 2.1875rem;
@@ -3126,6 +3148,27 @@ h2,
 	font-size: 1.25rem;
 }
 
+.btn__big {
+	font-size: 1.25rem;
+	padding: .6rem 1.25rem;
+}
+
+.btn__medium,
+#sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a {
+	font-size: 1rem;
+	padding: .7rem 1.6rem;
+}
+
+.btn__default {
+	font-size: 1.05rem;
+	padding: .6rem 2rem;
+}
+
+.btn__small {
+	padding: .7rem 1rem;
+}
+
 .padding {
 	padding-right: 32px !important;
 	padding-left: 32px !important;
@@ -3134,6 +3177,23 @@ h2,
 .margin {
 	margin-right: 32px !important;
 	margin-left: 32px !important;
+}
+
+.card-reveal:hover {
+	max-width: calc(50% + 150px) !important;
+	flex: 0 0 calc(50% + 150px) !important;
+}
+
+.card-reveal:hover + div {
+	margin-left: -150px;
+}
+
+.card-reveal:hover + div .card img {
+	transform: translateX(150px);
+}
+
+.card-reveal:hover .card-body {
+	padding-right: 150px !important;
 }
 
 .above-the-fold {
@@ -3171,7 +3231,8 @@ h2,
 }
 
 #navCollapse ul li {
-	font-size: 2.1875rem;
+	font-size: 2rem;
+	padding: 1.1rem 0;
 }
 
 .slider .swiper-slide {
@@ -3219,6 +3280,27 @@ h1,
 	font-size: 1.875rem;
 }
 
+.btn__big {
+	font-size: 1.1rem;
+	padding: .5rem 1rem;
+}
+
+.btn__medium,
+#sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram #sbi_load .sbi_follow_btn a {
+	font-size: .95rem;
+	padding: .4rem 1.25rem;
+}
+
+.btn__default {
+	font-size: .9rem;
+	padding: .5rem 1.25rem;
+}
+
+.btn__small {
+	padding: .5rem .8rem;
+}
+
 .padding {
 	padding-right: 16px !important;
 	padding-left: 16px !important;
@@ -3260,7 +3342,13 @@ h1,
 }
 
 #navCollapse ul li {
-	font-size: 1.875rem;
+	font-size: 1.6rem;
+	padding: 1rem 0;
+}
+
+.slider .swiper-slide {
+	max-width: 100%;
+	padding-top: 56.25%;
 }
 
 }

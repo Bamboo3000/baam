@@ -284,10 +284,20 @@ i {
       max-width: calc(50% + 250px) !important;
     }
 
+		@media (max-width: 991px) {
+      flex: 0 0 calc(50% + 150px) !important;
+      max-width: calc(50% + 150px) !important;
+    }
+
     & + div {
       margin-left: -300px;
+
       @media (max-width: 1199px) {
         margin-left: -250px;
+      }
+
+			@media (max-width: 991px) {
+        margin-left: -150px;
       }
 
       .card {
@@ -297,6 +307,11 @@ i {
           @media (max-width: 1199px) {
             transform: translateX(250px);
           }
+
+					@media (max-width: 991px) {
+            transform: translateX(150px);
+          }
+
         }
       }
     }
@@ -304,10 +319,6 @@ i {
     .card {
       border-top-right-radius: 300px !important;
       border-bottom-right-radius: 300px !important;
-      @media (max-width: 1199px) {
-        border-top-right-radius: 250px !important;
-        border-bottom-right-radius: 250px !important;
-      }
     }
 
     .card-body {
@@ -315,6 +326,10 @@ i {
 
       @media (max-width: 1199px) {
         padding-right: 250px !important;
+      }
+
+			@media (max-width: 991px) {
+        padding-right: 150px !important;
       }
 
       &-title {

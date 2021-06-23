@@ -1,8 +1,10 @@
 <section class="slider pb-4 <?php echo get_sub_field('center_slider') ? 'slider__center' : null; ?>">
-	<div class="swiper-container px-2 pb-3">
+	<div class="swiper-container px-md-3 px-2 pb-3">
 		<div class="swiper-wrapper">
-			<?php foreach (get_sub_field('slides') as $slide) : ?>
-				<div class="swiper-slide mx-3 border-radius">
+			<?php $i = 1;
+			$count = count(get_sub_field('slides'));
+			foreach (get_sub_field('slides') as $slide) : ?>
+				<div class="swiper-slide <?php echo $i !== $count ? 'mr-lg-4 mr-md-3 mr-2' : null ?> border-radius">
 					<?php if ($slide['slide_type'] == 'image') : ?>
 						<img data-src="<?php echo $slide['image']['url']; ?>" alt="<?php echo $slide['image']['title']; ?>" class="lazy bg-cover-abs">
 					<?php elseif ($slide['slide_type'] == 'video') : ?>
@@ -23,7 +25,8 @@
 						</a>
 					<?php endif; ?>
 				</div>
-			<?php endforeach; ?>
+			<?php $i++;
+			endforeach; ?>
 		</div>
 		<div class="swiper-scrollbar"></div>
 	</div>

@@ -24,8 +24,8 @@
 <div class="collapse w-100" id="navCollapse">
 	<div class="container-fluid p-0">
 		<div class="row">
-			<div class="col-12 pb-5">
-				<div class="card border-radius-s bg-grey8 text-white text-center p-5">
+			<div class="col-12 pb-lg-5 pb-4">
+				<div class="card border-radius-s bg-grey8 text-white text-center p-lg-5 p-4">
 					<ul class="list-unstyled text-size-xxxxlarge fw700 line-height-1">
 						<li>
 							<a href="/people">People</a>

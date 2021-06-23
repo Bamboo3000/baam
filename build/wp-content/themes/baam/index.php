@@ -11,25 +11,25 @@
 get_header();
 ?>
 
-<section class="stories px-5 pb-5">
-	<div class="container-fluid">
+<section class="stories pb-5">
+	<div class="container-fluid padding">
 		<div class="row">
 			<?php if (have_posts()) : ?>
-				<div class="col-lg-9">
+				<div class="col-md-9">
 					<div class="card p-1 m-0 border-radius-s mb-4">
 						<div class="card-body p-0 m-0">
 							<div class="row">
-								<div class="col-lg-4">
-									<a href="<?php echo get_post_type_archive_link( 'post' ); ?>" class="btn btn__medium w-100 hover-black border-radius-s active">
+								<div class="col-md-4">
+									<a href="<?php echo get_post_type_archive_link('post'); ?>" class="btn btn__medium w-100 hover-black border-radius-s active">
 										Everything
 									</a>
 								</div>
-								<div class="col-lg-4">
+								<div class="col-md-4">
 									<a href="/category/case-studies" class="btn btn__medium w-100 hover-black border-radius-s">
 										Case studies
 									</a>
 								</div>
-								<div class="col-lg-4">
+								<div class="col-md-4">
 									<a href="/category/news" class="btn btn__medium w-100 hover-black border-radius-s">
 										News
 									</a>
@@ -44,12 +44,12 @@ get_header();
 						while (have_posts()) :
 							the_post();
 
-							if( ($i + 2) % 3 === 0 ) {
-								$class = 'col-lg-8';
-							} elseif( $i % 3 === 0 ) {
+							if (($i + 2) % 3 === 0) {
+								$class = 'col-lg-8 col-md-6';
+							} elseif ($i % 3 === 0) {
 								$class = 'col-12';
 							} else {
-								$class = 'col-lg-4';
+								$class = 'col-lg-4 col-md-6';
 							}
 							/*
 							* Include the Post-Type-specific template for the content.
@@ -60,16 +60,16 @@ get_header();
 								<div class="card border-radius overflow-hidden border-0 h-100">
 									<div class="card-body p-0 h-100 d-flex">
 										<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-											<img data-src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo esc_html ( get_the_title() ); ?>" class="h-100 lazy bg-cover">
+											<img data-src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo esc_html(get_the_title()); ?>" class="h-100 lazy bg-cover">
 										</a>
-										<div class="btn btn__medium position-absolute bg-black py-2 px-4 border-radius-s right-0 bottom-0 mb-2 mr-2">
-											<?php echo esc_html ( get_the_title() ); ?>
+										<div class="btn btn__medium position-absolute bg-black py-2 px-4 border-radius-s right-0 bottom-0 mb-2 mx-2">
+											<?php echo esc_html(get_the_title()); ?>
 										</div>
 									</div>
 								</div>
 							</article>
 						<?php // get_template_part('template-parts/content', get_post_type());
-						$i++;
+							$i++;
 						endwhile;
 
 						the_posts_navigation(); ?>
@@ -81,7 +81,7 @@ get_header();
 
 			endif;
 			?>
-			<div class="col-lg-3">
+			<div class="col-md-3">
 				<div class="card p-1 m-0 border-radius-s mb-4">
 					<div class="card-body p-0 m-0">
 						<a href="https://www.instagram.com/insta_baam/" target="_blank" class="btn btn__medium w-100 hover-black border-radius-s py-3">

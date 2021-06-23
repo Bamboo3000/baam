@@ -154,8 +154,18 @@
 
 .border-radius {
     @include radius(16px);
+
+		@media(max-width: 991px) {
+			@include radius(12px);
+		}
+
 }
 
 .border-radius-s {
     @include radius(10px);
+
+		@media(max-width: 991px) {
+			@include radius(7px);
+		}
+
 }
